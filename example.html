@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head>
+<meta name="viewport" content="width=device-width" http-equiv="Content-Type">
+<title>Paint Example Page</title>
+<link rel="stylesheet" type="text/css" href="example.css">
+<link href="http://fonts.googleapis.com/css?family=Quicksand:200,400,700" rel="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+</head>	
+
+<body>
+<section class = "banner" id = "banner-top">
+	<div class = "container align-center">
+		<div class = "module per70">
+			<h1>Welcome to Paint</h1>
+			<p class = "margin-top">Paint is CSS framework that let's you 'paint' on styles with easy to remember
+			classes.  It speeds up development time, makes code easy to maintain, and is <span class = "italic">
+			totally</span> modular. </p>
+			<p>Adapt the existing settings to your own needs. Use what you want, scrap the rest.
+			Aside from the basic building blocks: banner, container, module ... nothing else carries any dependencies.
+			If you need to make changes to specific elements, just give that element an id and add it to the overrides
+			section of the css file.</p>
+			<p class = "large bold">Except for font family and color choices, no extra css was written to create this page.
+			What a time saver, eh?</p>
+			
+			<div class = "button margin-top bold">
+				<a href = "#banner-intro-to-modules">I'm a banana!</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class = "banner" id = "banner-intro-to-modules">
+	<div class = "container align-center">
+		<div class = "module per60 padding-right">
+			<h3 class = "margin-bottom">Neat, I'm vertically centered!</h3>
+			<p>If you wanted make the modules in this row aligned to the top, you would simply
+			add the .align-top class to the modules in this row.  You could also apply the .align-bottom
+			class.  Middle vertical alignment is the default.</p>
+			<p>Notice that margins between text in this module are created with the margin-bottom class.  
+			This is much more convenient than specifically identifying these elements in your css file
+			and applying the margin that way, or worse, using inline styles.</p>
+		</div>
+		
+		<div class = "module per40 padding-left">
+			<div class = "module per100 align-left panel special padding-medium" id = "module-panel-example">
+				<h3 class = "margin-bottom">Use panels for special backgrounds</h3>
+				<p>This is a panel module.  Panels are used when you have elements that require
+				colored or special backgrounds.  
+				<br><br>I've nested this panel module in a parent module, so I 
+				can create some space between the panel and the module on its left.  If this
+				wasn't a panel module, I wouldn't need to do that.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class = "banner" id = "banner-three-columns">
+	<div class = "container align-center">
+		<div class = "module per33 align-top padding-small">
+			<h3 class = "margin-bottom">Here's a column</h2>
+			<p>By using paint, you can create an entire layout without writing CSS.</p>
+		</div>
+		
+		<div class = "module per33 align-top padding-small">
+			<div class = "module per100">
+				<h3 class = "margin-bottom">There's a column</h2>
+				<div class = "module per50 align-top padding-right-mini">
+					<p>By nesting modules you can quickly and easily create sub-columns</p> 
+				</div>
+				<div class = "module per50 align-top padding-left-mini">
+					<p>Layout your content in a snap, and almost entirely in HTML!</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class = "module per33 align-top padding-small">
+			<h3 class = "margin-bottom">Everywhere's a column</h2>
+			<p>This makes the development process a lot faster and easier to maintain!</p>
+		</div>
+	</div>
+</section>
+
+<section class = "banner" id = "banner-mobile">
+	<div class = "container align-center">
+		<div class = "module per50">
+			<h2 class = "margin-bottom">And guess what?</h2>
+			<p class = "bold">Paint is 100% mobile ready and responsive.</p>
+			<p>Paint's built-in mobile styles result in sites that gracefully collapse into a centered, single column.  All other style elements are preserved.</p>
+			<img class = "margin-top" src = "mobile.png">
+	</div>
+</section>
+
+<section class = "banner" id = "banner-special-case">
+	<div class = "container-extended align-center">
+		<div class = "module per50 panel grey align-right padding-medium">
+			<div class = "container-inner align-center">
+				<h3>Left side full width panel</h3>
+				<p class = "italic margin-bottom">But still in the container!</p>
+				<p>Normally, if you wanted a full width background color, you would use an id on the 
+				section in question.  If you wanted to split the screen, with two <span class = "italic">
+				different</span> colored backgrounds, you will do it a little differently.</p>
+				<p>Instead of using the container class inside your section, you'll use the container-
+				extended class.  That will ensure your modules are able to span the full width of the screen.</p>
+			</div>
+		</div>
+	
+		<div class = "module per50 align-left padding-medium">
+			<div class = "container-inner align-center">
+				<h3>Right side full width panel</h3>
+				<p class = "italic margin-bottom">But still in the container!</p>
+				<p>Then, inside your two .module.per50 elements, you will use the container-inner class.
+				This will keep your text bound to the same container as the rest of your site.  Easy, peasy!
+				Take a look at the source to see it in action.
+			</div>
+		</div>
+	</div>
+</section>
+
+</body>

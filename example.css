@@ -1,0 +1,465 @@
+/**
+*** Paint CSS Framework
+*** Author: Ashley Livingston
+*** Version: 1.0.0
+**/
+
+
+/****************** GENERAL *****************/
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-weight: 400;
+	font-size: 1em;
+	font-family: "Quicksand";
+	color: #555;
+}
+
+
+/* BASIC ELEMENTS */
+
+/**
+*** Fill in your own requirements for these as necessary
+**/
+
+h1, h2 {
+	font-size: 3em;
+	font-weight: bold;
+	color: #ffcc00;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+h5, p {
+	font-size: 1em;
+}
+
+p, li {
+    line-height: 1.7em;
+	margin-bottom: 15px;
+}
+
+p:last-of-type,
+li:last-of-type {
+	margin-bottom: 0;
+}
+
+li {
+	margin-left: 30px;
+}
+
+img {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button,
+.button {
+	background-color: #ffcc00;
+	color: #fff;
+	border-radius: 5px;
+	padding: 12px;
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	width: auto;
+}
+
+.panel {
+	background-color: #BA55D3;
+	color: white;
+}
+
+.panel.special {
+	border-radius: 5px;
+	box-shadow: 2px 2px 4px 1px #bbb;
+}
+
+.panel:last-of-type {
+	margin-right: -4px;
+}
+
+
+/* FONTS */
+.mini {
+	font-size: .6em;
+}
+
+.small {
+	font-size: .8em;
+}
+
+.medium {
+	font-size: 1em; /* default font-size, no need to add this class to every module */
+}
+
+.large {
+	font-size: 1.25em;
+}
+
+.x2 {
+	font-size: 2em;
+}
+
+.x3 {
+	font-size: 3em;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-weight: italic;
+}
+
+
+
+
+
+/****************** SITE BUILDING BLOCKS *****************/
+.banner {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 75px 0px;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.container-extender {
+	width: 100%;
+}
+
+.container-inner {
+	max-width: 600px;
+	display: inline-block;
+	width: 100%;
+}
+
+/**
+*** Use for 'table' looking layouts, or layouts where pixel by pixel alignment 
+*** is extremely important.  Must specify the float class in your container
+*** element (or section.banner element, if you're not using a container) 
+**/
+
+.float .module {
+	float: left;
+	margin-left: initial;
+}
+
+/**
+*** Use for most other layouts - this method offers more flexibility with alignment
+*** and doesn't require the use of clear-fixes. This is default, you do need to specify
+*** the inline container class
+**/
+
+.inline .module,
+.module {
+	display: inline-block;
+	margin-left: -4px;
+	vertical-align: middle;
+}
+
+.module {
+	box-sizing: border-box;
+}
+
+/****************** LAYOUT *****************/
+
+/* ELEMENT WIDTH */
+
+/**
+*** If you require more specific widths, add them here in the same format
+*** .perPercentage
+**/
+
+
+.per10 {
+	width: 10%;
+}
+
+.per20 {
+	width: 20%;
+}
+
+.per25 {
+	width: 25%;
+}
+
+.per30 {
+	width: 30%;
+}
+
+.per33 {
+	width: 33.333%;
+}
+
+.per40 {
+	width: 40%;
+}
+
+.per50 {
+	width: 50%;
+}
+
+.per60 {
+	width: 60%;
+}
+
+.per70 {
+	width: 70%;
+}
+
+.per75 {
+	width: 75%;
+}
+
+.per80 {
+	width: 80%;
+}
+
+.per90 {
+	width: 90%;
+}
+
+.per100 {
+	width: 100%;
+}
+
+.module.per100 {
+	width: 100%;
+	display: block;
+	margin-left: initial;
+}
+
+
+/* ALIGNMENT */
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.module.align-top {
+	vertical-align: top;
+}
+
+.module.align-bottom{
+	vertical-align: bottom;
+}
+
+
+/* PADDING */
+
+
+/**
+*** All padding values are inside the box - use to create space between content 
+*** and module edge.  Module width will not change with padding.
+***
+***
+*** Use nested modules to create space between side-by-side elements with 
+*** background colors or images
+**/
+
+
+
+.padding-mini {
+	padding: 8px;
+}
+
+.padding-small {
+	padding: 15px;
+}
+
+.padding-medium {
+	padding: 30px;
+}
+
+.padding-large {
+	padding: 50px;
+}
+
+.padding-top {
+	padding-top: 15px;
+}
+
+.padding-right {
+	padding-right: 15px;
+}
+
+.padding-bottom {
+	padding-bottom: 15px;
+}
+
+.padding-left {
+	padding-left: 15px;
+}
+
+
+/* MARGIN */
+.margin-top {
+	margin-top: 30px;
+}
+
+.margin-right {
+	margin-right: 30px;
+}
+
+.margin-bottom {
+	margin-bottom: 30px;
+}
+
+.module.margin-left {
+	margin-left: 30px;
+}
+
+.margin-center {
+	margin: 0 auto;
+}
+
+
+/* COMMON SPECIAL CASES */
+.clear-fix {
+	clear: both;
+}
+
+img.image-bleed {
+	margin-bottom: -75px;
+	margin-top: -75px;
+}
+
+
+
+
+/***************************************************************************/
+/*************** YOUR OVERRIDES AND CUSTOMIZATIONS BELOW HERE **************/
+/***************************************************************************/
+
+.panel.grey {
+	background-color: #555;
+}
+
+#banner-top {
+	background-color: #79cdcd;
+}
+
+#banner-top p {
+	color: white;
+}
+
+#banner-three-columns {
+	background-color: #ddd;
+}
+
+
+
+/****************** MOBILE STYLES *****************/
+@media (min-width: 1400px) {
+	
+}
+
+@media (max-width: 1024px) {
+	
+}
+	
+	
+@media (max-width: 768px) {
+	.banner {
+		padding: 50px 0px;
+	}
+	
+	.container {
+		width: 92%;
+	}
+	
+	.module {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		float: none;
+	}
+	
+	.module:last-of-type {
+		margin-bottom: 0;
+	}
+	
+	.per10,
+	.per20,
+	.per25,
+	.per30,
+	.per33,
+	.per40,
+	.per50,
+	.per60,
+	.per70,
+	.per75,
+	.per80,
+	.per90,
+	.per100 {
+		width: 100%;
+	}
+	
+	img.image-bleed {
+		margin-bottom: -50px;
+		margin-top: -50px;
+	}
+	
+	
+	/* OPTIONAL, TO ENSURE EVERY ELEMENT IS CENTERED */
+	.align-left,
+	.align-right {
+		text-align: center;
+	}
+	
+	.padding-left {
+		padding-left: 0;
+	}
+	
+	.padding-right {
+		padding-right: 0;
+	}
+	
+	.module.margin-left {
+		margin-left: 0;
+	}
+	
+	.margin-right {
+		margin-right: 0;
+	}	
+}
+
