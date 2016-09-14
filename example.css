@@ -83,7 +83,7 @@ button,
 }
 
 .panel {
-	background-color: #BA55D3;
+	background-color: #555;
 	color: white;
 }
 
@@ -386,6 +386,9 @@ img.image-bleed {
 	background-color: #ddd;
 }
 
+.fa {
+	color: #79cdcd;
+}
 
 
 /****************** MOBILE STYLES *****************/
