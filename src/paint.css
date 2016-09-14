@@ -1,5 +1,5 @@
 /**
-*** Paint CSS Framework
+*** Paint CSS
 *** Author: Ashley Livingston
 *** Version: 1.0.0
 **/
@@ -167,6 +167,7 @@ button,
 
 .float .module {
 	float: left;
+	margin-left: initial;
 }
 
 /**
