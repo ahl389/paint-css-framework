@@ -5,6 +5,7 @@
 ##Table of Contents
 +[Overview](../Paint-CSS-Framework/blob/master/readme.md#overview)
 +[Setup](../Paint-CSS-Framework/blob/master/readme.md#setup)
++[Getting Started with Paint](../Paint-CSS-Framework/blob/master/readme.md#getting-started-with-paint)
 +[Classes](../Paint-CSS-Framework/blob/master/readme.md#classes)
 +[Usage Examples](../Paint-CSS-Framework/blob/master/readme.md#usage-examples)
 
@@ -58,107 +59,6 @@ They will automatically flow from left to right. At the very least, you assign e
 	</div>
 </section>
 ```
-
-##Usage Examples
-
-####One column, half-page wide, centered
-```html
-<section class = "banner" id = "banner-three-columns">
-	<div class = "container align-center">
-		<div class = "module per50">
-			<!-- content -->
-		</div>
-	</div>
-</section>
-```
-
-
-####Three column grid
-
-```html
-<section class = "banner" id = "banner-three-columns">
-	<div class = "container align-center">
-		<div class = "module per33">
-			<!-- content -->
-		</div>
-		<div class = "module per33">
-			<!-- content -->
-		</div>
-		<div class = "module per33">
-			<!-- content -->
-		</div>
-	</div>
-</section>
-```
-
-####Sub-columns
-
-```html
-<section class = "banner" id = "banner-sub-column">
-	<div class = "container align-center">
-		<div class = "module per50">
-			<!-- content -->
-		</div>
-		<div class = "module per50">
-			<div class = "module per40">
-				<!-- content -->
-			</div>
-			<div class = "module per60">
-				<!-- content -->
-			</div>
-		</div>
-	</div>
-</section>
-```
-
-####Panel
-
-```html
-<section class = "banner" id = "banner-panel">
-	<div class = "container align-center">
-		<div class = "module per80 padding-right">
-			<!-- content -->
-		</div>
-		<div class = "module per20 padding-left">
-			<div class = "module per100 panel padding-medium">
-				<!-- content -->
-			</div>
-		</div>
-	</div>
-</section>
-```
-
-####Full width / edge extended panel
-
-Notice the slightly different structure and container elements.
-The panel class can be applied to both module elements for a split screen
-color effect.
-
-```html
-<section class = "banner" id = "banner-special-case">
-	<div class = "container-extended align-center">
-		<div class = "module per50 panel align-right padding-medium">
-			<div class = "container-inner align-center">
-				<!-- content -->
-			</div>
-		</div>
-		<div class = "module per50 align-left padding-medium">
-			<div class = "container-inner align-center">
-				<!-- content -->
-			</div>
-		</div>
-	</div>
-</section>
-```
-
-####Text styles
-
-```html
-<div class = "module per100">
-	<h2 class = "margin-bottom uppercase">Section Title</h2>
-	<p class = "italic bold large">Section sub-title</p> 
-</div>
-````
 
 ##Classes
 
@@ -264,5 +164,105 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .margin-right
 + .margin-bottom
 + .margin-left
-+ .maergin-center
++ .margin-center
 
+##Usage Examples
+
+####One column, half-page wide, centered
+```html
+<section class = "banner" id = "banner-three-columns">
+	<div class = "container align-center">
+		<div class = "module per50">
+			<!-- content -->
+		</div>
+	</div>
+</section>
+```
+
+
+####Three column grid
+
+```html
+<section class = "banner" id = "banner-three-columns">
+	<div class = "container align-center">
+		<div class = "module per33">
+			<!-- content -->
+		</div>
+		<div class = "module per33">
+			<!-- content -->
+		</div>
+		<div class = "module per33">
+			<!-- content -->
+		</div>
+	</div>
+</section>
+```
+
+####Sub-columns
+
+```html
+<section class = "banner" id = "banner-sub-column">
+	<div class = "container align-center">
+		<div class = "module per50">
+			<!-- content -->
+		</div>
+		<div class = "module per50">
+			<div class = "module per40">
+				<!-- content -->
+			</div>
+			<div class = "module per60">
+				<!-- content -->
+			</div>
+		</div>
+	</div>
+</section>
+```
+
+####Panel
+
+```html
+<section class = "banner" id = "banner-panel">
+	<div class = "container align-center">
+		<div class = "module per80 padding-right">
+			<!-- content -->
+		</div>
+		<div class = "module per20 padding-left">
+			<div class = "module per100 panel padding-medium">
+				<!-- content -->
+			</div>
+		</div>
+	</div>
+</section>
+```
+
+####Full width / edge extended panel
+
+Notice the slightly different structure and container elements.
+The panel class can be applied to both module elements for a split screen
+color effect.
+
+```html
+<section class = "banner" id = "banner-special-case">
+	<div class = "container-extended align-center">
+		<div class = "module per50 panel align-right padding-medium">
+			<div class = "container-inner align-center">
+				<!-- content -->
+			</div>
+		</div>
+		<div class = "module per50 align-left padding-medium">
+			<div class = "container-inner align-center">
+				<!-- content -->
+			</div>
+		</div>
+	</div>
+</section>
+```
+
+####Text styles
+
+```html
+<div class = "module per100">
+	<h2 class = "margin-bottom uppercase">Section Title</h2>
+	<p class = "italic bold large">Section sub-title</p> 
+</div>
+````
