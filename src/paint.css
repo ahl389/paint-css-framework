@@ -81,7 +81,7 @@ button,
 	color: white;
 }
 
-.panel.special {
+.panel.highlight {
 	border-radius: 5px;
 	box-shadow: 2px 2px 4px 1px #bbb;
 }
@@ -275,6 +275,10 @@ button,
 
 .module.align-top {
 	vertical-align: top;
+}
+
+.module.align-middle {
+	vertical-align: middle;
 }
 
 .module.align-bottom{
