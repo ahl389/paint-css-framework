@@ -3,11 +3,11 @@
 ---
 
 ##Table of Contents
-+ [Overview](../Paint-CSS-Framework/blob/master/readme.md#overview)
-+ [Setup](../Paint-CSS-Framework/blob/master/readme.md#setup)
-+ [Getting Started with Paint](../Paint-CSS-Framework/blob/master/readme.md#getting-started-with-paint)
-+ [Classes](../Paint-CSS-Framework/blob/master/readme.md#classes)
-+ [Usage Examples](../Paint-CSS-Framework/blob/master/readme.md#usage-examples)
++ [Overview](../master/readme.md#overview)
++ [Setup](../master/readme.md#setup)
++ [Getting Started with Paint](../master/readme.md#getting-started-with-paint)
++ [Classes](../master/readme.md#classes)
++ [Usage Examples](../master/readme.md#usage-examples)
 
 
 ##Overview
