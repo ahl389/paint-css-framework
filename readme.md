@@ -14,6 +14,8 @@
 Paint is a simple, lightweight, modular CSS framework that allows you rapidly layout and style responsive websites without 
 having to write much additional CSS.
 
+[Check out the example site, built entirely with Paint and regular HTML](https://ahl389.github.io/Paint-CSS-Framework/)
+
 ##Setup
 Grab the source paint.css file and save in your project's CSS directory. This file is designed to be your primary stylesheet.
 
@@ -70,13 +72,7 @@ Typical order of class application is as follows:
 width, panel, padding, margin, alignment, font styles
 
 ```html
-<div class = "module per25 panel padding-small align-top">
-	<!-- content here -->
-</div>
-```
-
-```html
-<div class = "module per80 margin-top margin-bottom">
+<div class = "module per80 panel padding-small margin-top margin-bottom">
 	<h3 class = "bold">H3 Heading</h3>
 	<p class = "margin-top italic">Content</p>
 </div>
@@ -103,12 +99,12 @@ Available classes include:
 
 
 #####Fonts & Text
-+ .mini
-+ .small
-+ .medium
-+ .large
-+ .x2
-+ .x3
++ .mini (.6em)
++ .small (.8em)
++ .medium (1em)
++ .large (1.25em)
++ .x2 (2em)
++ .x3 (3em)
 + .uppercase
 + .lowercase
 + .bold
@@ -122,7 +118,7 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .per20
 + .per25
 + .per30
-+ .per33 (33+ .3333% width)
++ .per33 (33.33%)
 + .per40
 + .per50
 + .per60
