@@ -132,6 +132,17 @@ button,
 	font-weight: italic;
 }
 
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
 
 
 
@@ -143,47 +154,41 @@ button,
 	padding: 75px 0px;
 }
 
+.container,
+.container-extender,
+.container-inner,
+.module-container {
+    display: -webkit-box;  
+    display: -ms-flexbox;  
+    display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
 .container {
 	width: 90%;
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
-.container-extender {
+.container-extender,
+.container-inner,
+.module-container {
 	width: 100%;
+}
+
+.container-extender {
+	max-width: initial;
 }
 
 .container-inner {
 	max-width: 600px;
-	display: inline-block;
-	width: 100%;
-}
-
-/**
-*** Use for 'table' looking layouts, or layouts where pixel by pixel alignment 
-*** is extremely important.  Must specify the float class in your container
-*** element (or section.banner element, if you're not using a container) 
-**/
-
-.float .module {
-	float: left;
-	margin-left: initial;
-}
-
-/**
-*** Use for most other layouts - this method offers more flexibility with alignment
-*** and doesn't require the use of clear-fixes. This is default, you do need to specify
-*** the inline container class
-**/
-
-.inline .module,
-.module {
-	display: inline-block;
-	margin-left: -4px;
-	vertical-align: middle;
+	flex: 0 1 auto;
 }
 
 .module {
+	flex: 0 1 auto;
 	box-sizing: border-box;
 }
 
@@ -191,7 +196,9 @@ button,
 
 
 
-/****************** LAYOUT *****************/
+/***************************************************************************/
+					/*************** LAYOUT **************/
+/***************************************************************************/
 
 /* ELEMENT WIDTH */
 
@@ -260,33 +267,73 @@ button,
 }
 
 
-/* ALIGNMENT */
+/***************************************************************************/
+				/*************** ALIGNMENT **************/
+/***************************************************************************/
+
+/**
+*** Apply the following styles to the container element to align the children
+*** inside the container
+**/
+
 .align-left {
-	text-align: left;
+	justify-content: flex-start;
 }
 
 .align-center {
-	text-align: center;
+	justify-content: center;
 }
 
 .align-right {
-	text-align: right;
+	justify-content: flex-end;
 }
 
-.module.align-top {
-	vertical-align: top;
+.align-top {
+	align-items: flex-start;
 }
 
-.module.align-middle {
-	vertical-align: middle;
+.align-middle {
+	align-items: center;
 }
 
-.module.align-bottom{
-	vertical-align: bottom;
+.align-bottom {
+	align-items: flex-end;
+}
+
+.align-stretch {
+	align-items: stretch;
 }
 
 
-/* PADDING */
+/**
+*** Apply the following styles to the children elements of the flex container
+*** i.e. module elements to align individual modules
+**/
+
+.self-align-top {
+	align-self: flex-start;
+}
+
+.self-align-bottom {
+	align-self: flex-end;
+}
+
+.self-align-center {
+	align-self: center;
+}
+
+.self-align-stretch {
+	align-self: stretch;
+}
+
+
+
+
+
+
+/***************************************************************************/
+					/*************** PADDING **************/
+/***************************************************************************/
 
 
 /**
@@ -333,7 +380,10 @@ button,
 }
 
 
-/* MARGIN */
+/***************************************************************************/
+					/*************** MARGIN **************/
+/***************************************************************************/
+
 .margin-top {
 	margin-top: 30px;
 }
@@ -356,10 +406,6 @@ button,
 
 
 /* COMMON SPECIAL CASES */
-.clear-fix {
-	clear: both;
-}
-
 img.image-bleed {
 	margin-bottom: -75px;
 	margin-top: -75px;
@@ -376,7 +422,9 @@ img.image-bleed {
 
 
 
-/****************** MOBILE STYLES *****************/
+/***************************************************************************/
+				/*************** MOBILE STYLE **************/
+/***************************************************************************/
 @media (min-width: 1400px) {
 	
 }
@@ -429,8 +477,8 @@ img.image-bleed {
 	
 	
 	/* OPTIONAL, TO ENSURE EVERY ELEMENT IS CENTERED */
-	.align-left,
-	.align-right {
+	.text-left,
+	.text-right {
 		text-align: center;
 	}
 	

@@ -13,12 +13,6 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 	font-size: 1em;
 }
 
-body {
-	font-weight: 400;
-	font-size: 1em;
-	font-family: "Quicksand";
-	color: #555;
-}
 
 /* BASIC ELEMENTS */
 
@@ -29,7 +23,6 @@ body {
 h1, h2 {
 	font-size: 3em;
 	font-weight: bold;
-	color: #ffcc00;
 }
 
 h3 {
@@ -41,6 +34,7 @@ h4 {
 	font-size: 1.25em;
 	font-weight: bold;
 }
+
 h5, p {
 	font-size: 1em;
 }
@@ -72,7 +66,7 @@ a {
 
 button,
 .button {
-	background-color: #ffcc00;
+	background-color: #555;
 	color: #fff;
 	border-radius: 5px;
 	padding: 12px;
@@ -83,11 +77,11 @@ button,
 }
 
 .panel {
-	background-color: #555;
+	background-color: #999;
 	color: white;
 }
 
-.panel.special {
+.panel.highlight {
 	border-radius: 5px;
 	box-shadow: 2px 2px 4px 1px #bbb;
 }
@@ -138,17 +132,6 @@ button,
 	font-weight: italic;
 }
 
-.text-left {
-	text-align: left;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.text-right {
-	text-align: right;
-}
 
 
 
@@ -160,41 +143,47 @@ button,
 	padding: 75px 0px;
 }
 
-.container,
-.container-extender,
-.container-inner,
-.module-container {
-    display: -webkit-box;  
-    display: -ms-flexbox;  
-    display: -webkit-flex;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
 .container {
 	width: 90%;
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
-.container-extender,
-.container-inner,
-.module-container {
-	width: 100%;
-}
-
 .container-extender {
-	max-width: initial;
+	width: 100%;
 }
 
 .container-inner {
 	max-width: 600px;
-	flex: 0 1 auto;
+	display: inline-block;
+	width: 100%;
+}
+
+/**
+*** Use for 'table' looking layouts, or layouts where pixel by pixel alignment 
+*** is extremely important.  Must specify the float class in your container
+*** element (or section.banner element, if you're not using a container) 
+**/
+
+.float .module {
+	float: left;
+	margin-left: initial;
+}
+
+/**
+*** Use for most other layouts - this method offers more flexibility with alignment
+*** and doesn't require the use of clear-fixes. This is default, you do need to specify
+*** the inline container class
+**/
+
+.inline .module,
+.module {
+	display: inline-block;
+	margin-left: -4px;
+	vertical-align: middle;
 }
 
 .module {
-	flex: 0 1 auto;
 	box-sizing: border-box;
 }
 
@@ -202,9 +191,7 @@ button,
 
 
 
-/***************************************************************************/
-					/*************** LAYOUT **************/
-/***************************************************************************/
+/****************** LAYOUT *****************/
 
 /* ELEMENT WIDTH */
 
@@ -273,73 +260,33 @@ button,
 }
 
 
-/***************************************************************************/
-				/*************** ALIGNMENT **************/
-/***************************************************************************/
-
-/**
-*** Apply the following styles to the container element to align the children
-*** inside the container
-**/
-
+/* ALIGNMENT */
 .align-left {
-	justify-content: flex-start;
+	text-align: left;
 }
 
 .align-center {
-	justify-content: center;
+	text-align: center;
 }
 
 .align-right {
-	justify-content: flex-end;
+	text-align: right;
 }
 
-.align-top {
-	align-items: flex-start;
+.module.align-top {
+	vertical-align: top;
 }
 
-.align-middle {
-	align-items: center;
+.module.align-middle {
+	vertical-align: middle;
 }
 
-.align-bottom {
-	align-items: flex-end;
-}
-
-.align-stretch {
-	align-items: stretch;
+.module.align-bottom{
+	vertical-align: bottom;
 }
 
 
-/**
-*** Apply the following styles to the children elements of the flex container
-*** i.e. module elements to align individual modules
-**/
-
-.self-align-top {
-	align-self: flex-start;
-}
-
-.self-align-bottom {
-	align-self: flex-end;
-}
-
-.self-align-center {
-	align-self: center;
-}
-
-.self-align-stretch {
-	align-self: stretch;
-}
-
-
-
-
-
-
-/***************************************************************************/
-					/*************** PADDING **************/
-/***************************************************************************/
+/* PADDING */
 
 
 /**
@@ -386,10 +333,7 @@ button,
 }
 
 
-/***************************************************************************/
-					/*************** MARGIN **************/
-/***************************************************************************/
-
+/* MARGIN */
 .margin-top {
 	margin-top: 30px;
 }
@@ -412,6 +356,10 @@ button,
 
 
 /* COMMON SPECIAL CASES */
+.clear-fix {
+	clear: both;
+}
+
 img.image-bleed {
 	margin-bottom: -75px;
 	margin-top: -75px;
@@ -424,31 +372,11 @@ img.image-bleed {
 /*************** YOUR OVERRIDES AND CUSTOMIZATIONS BELOW HERE **************/
 /***************************************************************************/
 
-.panel.grey {
-	background-color: #555;
-}
-
-#banner-top {
-	background-color: #79cdcd;
-}
-
-#banner-top p {
-	color: white;
-}
-
-#banner-three-columns {
-	background-color: #ededed;
-}
-
-.fa {
-	color: #79cdcd;
-}
 
 
 
-/***************************************************************************/
-				/*************** MOBILE STYLE **************/
-/***************************************************************************/
+
+/****************** MOBILE STYLES *****************/
 @media (min-width: 1400px) {
 	
 }
@@ -501,8 +429,8 @@ img.image-bleed {
 	
 	
 	/* OPTIONAL, TO ENSURE EVERY ELEMENT IS CENTERED */
-	.text-left,
-	.text-right {
+	.align-left,
+	.align-right {
 		text-align: center;
 	}
 	
