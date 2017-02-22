@@ -86,7 +86,7 @@ Available classes include:
 + .container
 + .container-extender
 + .container-inner
-+ .moduel-container
++ .module-container
 + .module
 
 
@@ -96,7 +96,6 @@ Available classes include:
 + .panel
 + .panel.highlight
 + .clear-fix (special use case)
-+ .image-bleed
 
 
 #####Fonts & Text

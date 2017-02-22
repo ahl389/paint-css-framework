@@ -116,6 +116,10 @@ button,
 	font-size: 3em;
 }
 
+.x4 {
+	font-size: 4em;
+}
+
 .uppercase {
 	text-transform: uppercase;
 }
