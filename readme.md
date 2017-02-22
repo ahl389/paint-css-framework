@@ -131,7 +131,7 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .per100
 
 
-#####Module Width (Tablet & Mobile)
+#####Module Width (Tablet)
 + .tab-per10
 + .tab-per20
 + .tab-per25
@@ -145,6 +145,9 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .tab-per80
 + .tab-per90
 + .tab-per100
+
+
+#####Module Width (Mobile)
 + .mob-per10
 + .mob-per20
 + .mob-per25
@@ -160,7 +163,7 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .mob-per100
 
 
-#####Module Order (Tablet & Mobile)
+#####Module Order (Tablet)
 + .tab-order-1
 + .tab-order-2
 + .tab-order-3
@@ -170,6 +173,9 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .tab-order-7
 + .tab-order-8
 + .tab-order-9
+
+
+#####Module Order (Mobile)
 + .mob-order-1
 + .mob-order-2
 + .mob-order-3
