@@ -260,12 +260,6 @@ button,
 	width: 100%;
 }
 
-.module.per100 {
-	width: 100%;
-	display: block;
-	margin-left: initial;
-}
-
 
 /***************************************************************************/
 				/*************** ALIGNMENT **************/
@@ -363,20 +357,72 @@ button,
 	padding: 50px;
 }
 
-.padding-top {
+
+.padding-top-mini {
+	padding-top: 8px;
+}
+
+.padding-top-small {
 	padding-top: 15px;
 }
 
-.padding-right {
+.padding-top-medium {
+	padding-top: 30px;
+}
+
+.padding-top-large {
+	padding-top: 50px;
+}
+
+
+.padding-right-mini {
+	padding-right: 8px;
+}
+
+.padding-right-small {
 	padding-right: 15px;
 }
 
-.padding-bottom {
+.padding-right-medium {
+	padding-right: 30px;
+}
+
+.padding-right-large {
+	padding-right: 50px;
+}
+
+
+.padding-bottom-mini {
+	padding-bottom: 8px;
+}
+
+.padding-bottom-small {
 	padding-bottom: 15px;
 }
 
-.padding-left {
+.padding-bottom-medium {
+	padding-bottom: 30px;
+}
+
+.padding-bottom-large {
+	padding-bottom: 50px;
+}
+
+
+.padding-left-mini {
+	padding-left: 8px;
+}
+
+.padding-left-small {
 	padding-left: 15px;
+}
+
+.padding-left-medium {
+	padding-left: 30px;
+}
+
+.padding-left-large {
+	padding-left: 50px;
 }
 
 
@@ -396,19 +442,12 @@ button,
 	margin-bottom: 30px;
 }
 
-.module.margin-left {
+.margin-left {
 	margin-left: 30px;
 }
 
 .margin-center {
 	margin: 0 auto;
-}
-
-
-/* COMMON SPECIAL CASES */
-img.image-bleed {
-	margin-bottom: -75px;
-	margin-top: -75px;
 }
 
 
@@ -430,7 +469,112 @@ img.image-bleed {
 }
 
 @media (max-width: 1024px) {
+	.per10.no-collapse,
+	.per20.no-collapse,
+	.per25.no-collapse, 
+	.per30.no-collapse,
+	.per40.no-collapse,
+	.per50.no-collapse,
+	.per60.no-collapse,
+	.per70.no-collapse,
+	.per75.no-collapse,
+	.per80.no-collapse,
+	.per90.no-collapse {
+		width: initial;
+	}
 	
+	.tab-per10 {
+		width: 10%;
+	}
+
+	.tab-per20 {
+		width: 20%;
+	}
+
+	.tab-per25 {
+		width: 25%;
+	}
+
+	.tab-per30 {
+		width: 30%;
+	}
+
+	.tab-per33 {
+		width: 33.333%;
+	}
+
+	.tab-per40 {
+		width: 40%;
+	}
+
+	.tab-per50 {
+		width: 50%;
+	}
+
+	.tab-per60 {
+		width: 60%;
+	}
+
+	.tab-per70 {
+		width: 70%;
+	}
+
+	.tab-per75 {
+		width: 75%;
+	}
+
+	.tab-per80 {
+		width: 80%;
+	}
+
+	.tab-per90 {
+		width: 90%;
+	}
+
+	.tab-per100 {
+		width: 100%;
+	}
+	
+	
+	.tab-order-1 {
+		order: 1;
+	}
+	
+	.tab-order-2 {
+		order: 2;
+	}
+	
+	.tab-order-3 {
+		order: 3;
+	}
+	
+	.tab-order-4 {
+		order: 4;
+	}
+	
+	.tab-order-5 {
+		order: 5;
+	}
+	
+	.tab-order-6 {
+		order: 6;
+	}
+	
+	.tab-order-7 {
+		order: 7;
+	}
+	
+	.tab-order-8 {
+		order: 8;
+	}
+	
+	.tab-order-9 {
+		order: 9;
+	}
+	
+	.tab-order-10 {
+		order: 10;
+	}
 }
 	
 	
@@ -444,10 +588,7 @@ img.image-bleed {
 	}
 	
 	.module {
-		display: block;
-		margin: 0 auto;
 		margin-bottom: 30px;
-		float: none;
 	}
 	
 	.module:last-of-type {
@@ -470,9 +611,98 @@ img.image-bleed {
 		width: 100%;
 	}
 	
-	img.image-bleed {
-		margin-bottom: -50px;
-		margin-top: -50px;
+	
+	.mob-per10 {
+		width: 10%;
+	}
+
+	.mob-per20 {
+		width: 20%;
+	}
+
+	.mob-per25 {
+		width: 25%;
+	}
+
+	.mob-per30 {
+		width: 30%;
+	}
+
+	.mob-per33 {
+		width: 33.333%;
+	}
+
+	.mob-per40 {
+		width: 40%;
+	}
+
+	.mob-per50 {
+		width: 50%;
+	}
+
+	.mob-per60 {
+		width: 60%;
+	}
+
+	.mob-per70 {
+		width: 70%;
+	}
+
+	.mob-per75 {
+		width: 75%;
+	}
+
+	.mob-per80 {
+		width: 80%;
+	}
+
+	.mob-per90 {
+		width: 90%;
+	}
+
+	.mob-per100 {
+		width: 100%;
+	}
+	
+	
+	.mob-order-1 {
+		order: 1;
+	}
+	
+	.mob-order-2 {
+		order: 2;
+	}
+	
+	.mob-order-3 {
+		order: 3;
+	}
+	
+	.mob-order-4 {
+		order: 4;
+	}
+	
+	.mob-order-5 {
+		order: 5;
+	}
+	
+	.mob-order-6 {
+		order: 6;
+	}
+	
+	.mob-order-7 {
+		order: 7;
+	}
+	
+	.mob-order-8 {
+		order: 8;
+	}
+	
+	.mob-order-9 {
+		order: 9;
+	}
+	
+	.mob-order-10 {
+		order: 10;
 	}
 	
 	
@@ -482,15 +712,21 @@ img.image-bleed {
 		text-align: center;
 	}
 	
-	.padding-left {
+	.padding-left-mini,
+	.padding-left-small,
+	.padding-left-medium,
+	.padding-left-large {
 		padding-left: 0;
 	}
 	
-	.padding-right {
+	.padding-right-mini,
+	.padding-right-small,
+	.padding-right-medium,
+	.padding-right-large {
 		padding-right: 0;
 	}
 	
-	.module.margin-left {
+	.margin-left {
 		margin-left: 0;
 	}
 	
