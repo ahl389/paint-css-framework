@@ -86,6 +86,7 @@ Available classes include:
 + .container
 + .container-extender
 + .container-inner
++ .moduel-container
 + .module
 
 
@@ -105,6 +106,7 @@ Available classes include:
 + .large (1.25em)
 + .x2 (2em)
 + .x3 (3em)
++ .x4 (4em)
 + .uppercase
 + .lowercase
 + .bold
@@ -129,16 +131,80 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .per100
 
 
+#####Module Width (Tablet & Mobile)
++ .tab-per10
++ .tab-per20
++ .tab-per25
++ .tab-per30
++ .tab-per33 (33.33%)
++ .tab-per40
++ .tab-per50
++ .tab-per60
++ .tab-per70
++ .tab-per75
++ .tab-per80
++ .tab-per90
++ .tab-per100
+
++ .mob-per10
++ .mob-per20
++ .mob-per25
++ .mob-per30
++ .mob-per33 (33.33%)
++ .mob-per40
++ .mob-per50
++ .mob-per60
++ .mob-per70
++ .mob-per75
++ .mob-per80
++ .mob-per90
++ .mob-per100
+
+
+#####Module Order (Tablet & Mobile)
++ .tab-order-1
++ .tab-order-2
++ .tab-order-3
++ .tab-order-4
++ .tab-order-5
++ .tab-order-6
++ .tab-order-7
++ .tab-order-8
++ .tab-order-9
+
++ .mob-order-1
++ .mob-order-2
++ .mob-order-3
++ .mob-order-4
++ .mob-order-5
++ .mob-order-6
++ .mob-order-7
++ .mob-order-8
++ .mob-order-9
+
+
 #####Text Alignment
-+ .align-left (default)
-+ .align-center
-+ .align-right
++ .text-left (default)
++ .text-center
++ .text-right
 
 
-#####Module Vertical Alignment
+#####To Align All Modules Within a Container (Apply to container)
++ .align-left 
++ .align-center 
++ .align-right 
 + .align-top
-+ .align-middle (default)
-+ .align-bottom
++ .align-middle 
++ .align-bottom 
++ .align-stretch 
+
+
+#####To Align Individual Modules (Apply to module)
++ .self-align-top
++ .self-align-middle 
++ .self-align-bottom
++ .self-align-left
++ .self-align-right
 
 
 #####Padding - 4 Sides
@@ -148,11 +214,15 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .padding-large (50px)
 
 
-#####Padding - 1 Side (All 15px)
-+ .padding-top
-+ .padding-right
-+ .padding-bottom
-+ .padding-left
+#####Padding - 1 Side 
++ .padding-top-mini (8px)
++ .padding-top-small (15px)
++ .padding-top-medium (30px)
++ .padding-top-large (50px)
+
++ .padding-right-mini(-small, -medium, -large)
++ .padding-bottom-mini(-small, -medium, -large)
++ .padding-left-mini(-small, -medium, -large)
 
 
 #####Margin - 1 side (All 30px)
@@ -194,7 +264,7 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 </section>
 ```
 
-####Sub-columns
+####Sub-columns/Nested Columns
 
 ```html
 <section class = "banner" id = "banner-sub-column">
@@ -203,11 +273,13 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 			<!-- content -->
 		</div>
 		<div class = "module per50">
-			<div class = "module per40">
-				<!-- content -->
-			</div>
-			<div class = "module per60">
-				<!-- content -->
+			<div class = "module-container"
+				<div class = "module per40">
+					<!-- content -->
+				</div>
+				<div class = "module per60">
+					<!-- content -->
+				</div>
 			</div>
 		</div>
 	</div>

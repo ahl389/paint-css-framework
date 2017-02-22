@@ -168,7 +168,7 @@ button,
 
 .container {
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1300px;
 	margin: 0 auto;
 }
 
@@ -183,7 +183,7 @@ button,
 }
 
 .container-inner {
-	max-width: 600px;
+	max-width: 650px;
 	flex: 0 1 auto;
 }
 
@@ -312,7 +312,7 @@ button,
 	align-self: flex-end;
 }
 
-.self-align-center {
+.self-align-middle {
 	align-self: center;
 }
 
@@ -320,7 +320,13 @@ button,
 	align-self: stretch;
 }
 
+.self-align-right {
+	margin-left: auto;
+}
 
+.self-align-left {
+	margin-right: auto;
+}
 
 
 
