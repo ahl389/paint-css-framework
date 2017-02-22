@@ -145,7 +145,6 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .tab-per80
 + .tab-per90
 + .tab-per100
-
 + .mob-per10
 + .mob-per20
 + .mob-per25
@@ -171,7 +170,6 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .tab-order-7
 + .tab-order-8
 + .tab-order-9
-
 + .mob-order-1
 + .mob-order-2
 + .mob-order-3
@@ -219,7 +217,6 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .padding-top-small (15px)
 + .padding-top-medium (30px)
 + .padding-top-large (50px)
-
 + .padding-right-mini(-small, -medium, -large)
 + .padding-bottom-mini(-small, -medium, -large)
 + .padding-left-mini(-small, -medium, -large)
