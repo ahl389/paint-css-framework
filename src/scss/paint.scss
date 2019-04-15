@@ -1,0 +1,1013 @@
+/* BASIC ELEMENTS */
+
+/**
+*** Fill in your own requirements for these as necessary
+**/
+
+h1, h2 {
+	font-size: $x3-font;
+	font-weight: bold;
+	color: $accent-color;
+}
+
+h3 {
+	font-size: $xl-font;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: $large-font;
+	font-weight: bold;
+}
+
+h5, p, li {
+	font-size: $medium-font;
+	color: $primary-color;
+}
+
+p, li {
+    line-height: 1.7em;
+	margin-bottom: $small;
+}
+
+p:last-of-type,
+li:last-of-type {
+	margin-bottom: 0;
+}
+
+li {
+	margin-left: $medium;
+}
+
+img {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button,
+.button {
+	background-color: $button-color;
+	color: #fff;
+	border-radius: 5px;
+	padding: 12px;
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	width: auto;
+}
+
+.panel {
+	background-color: $panel-color;
+	color: white;
+}
+
+.panel.highlight {
+	border-radius: 5px;
+	box-shadow: 2px 2px 4px 1px #bbb;
+}
+
+.panel:last-of-type {
+	margin-right: -4px;
+}
+
+
+/* FONTS */
+.mini {
+	font-size: $mini-font;
+}
+
+.small {
+	font-size: $small-font;
+}
+
+.medium {
+	font-size: $medium-font; /* default font-size, no need to add this class to every module */
+}
+
+.large {
+	font-size: $large-font;
+}
+
+.xl {
+	font-size: $xl-font;
+}
+
+.x2 {
+	font-size: $x2-font;
+}
+
+.x3 {
+	font-size: $x3-font;
+}
+
+.x4 {
+	font-size: $x4-font;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-weight: italic;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+
+
+
+/****************** SITE BUILDING BLOCKS *****************/
+.banner {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 75px 0px;
+}
+
+.container,
+.container-extender,
+.container-inner,
+.module-container {
+    display: -webkit-box;  
+    display: -ms-flexbox;  
+    display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.container {
+	width: 90%;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.container-extender,
+.container-inner,
+.module-container {
+	width: 100%;
+}
+
+.container-extender {
+	max-width: initial;
+}
+
+.container-inner {
+	max-width: 650px;
+	flex: 0 1 auto;
+}
+
+.module {
+	flex: 0 1 auto;
+	box-sizing: border-box;
+	
+	.container {
+		width: 100%;
+	}
+}
+
+
+
+
+
+/***************************************************************************/
+					/*************** LAYOUT **************/
+/***************************************************************************/
+
+/* ELEMENT WIDTH */
+
+/**
+*** If you require more specific widths, add them here in the same format
+*** .perPercentage
+**/
+
+
+.per10,
+.p10 {
+	width: 10%;
+}
+
+.p15 {
+	width: 15%;
+}
+
+.per20,
+.p20 {
+	width: 20%;
+}
+
+.per25,
+.p25 {
+	width: 25%;
+}
+
+.per30,
+.p30 {
+	width: 30%;
+}
+
+.per33,
+.p33 {
+	width: 33.333%;
+}
+
+.p35 {
+	width: 35%;
+}
+
+.per40,
+.p40 {
+	width: 40%;
+}
+
+.p45 {
+	width: 45%;
+}
+
+.per50,
+.p50 {
+	width: 50%;
+}
+
+.p55 {
+	width: 55%;
+}
+
+.per60,
+.p60 {
+	width: 60%;
+}
+
+.p65 {
+	width: 65%;
+}
+
+.p66 {
+	width: 66.666667%;
+}
+
+.per70,
+.p70 {
+	width: 70%;
+}
+
+.per75,
+.p75 {
+	width: 75%;
+}
+
+.per80,
+.p80 {
+	width: 80%;
+}
+
+.p85 {
+	width: 85%;
+}
+
+.per90,
+.p90 {
+	width: 90%;
+}
+
+.p95 {
+	width: 95%;
+}
+
+.per100,
+.p100 {
+	width: 100%;
+}
+
+
+/***************************************************************************/
+				/*************** ALIGNMENT **************/
+/***************************************************************************/
+
+/**
+*** Apply the following styles to the container element to align the children
+*** inside the container
+**/
+
+.align-left {
+	justify-content: flex-start;
+}
+
+.align-center {
+	justify-content: center;
+}
+
+.align-right {
+	justify-content: flex-end;
+}
+
+.align-top {
+	align-items: flex-start;
+}
+
+.align-middle {
+	align-items: center;
+}
+
+.align-bottom {
+	align-items: flex-end;
+}
+
+.align-stretch {
+	align-items: stretch;
+}
+
+
+/**
+*** Apply the following styles to the children elements of the flex container
+*** i.e. module elements to align individual modules
+**/
+
+.self-align-top {
+	align-self: flex-start;
+}
+
+.self-align-bottom {
+	align-self: flex-end;
+}
+
+.self-align-middle {
+	align-self: center;
+}
+
+.self-align-stretch {
+	align-self: stretch;
+}
+
+.self-align-right {
+	margin-left: auto;
+}
+
+.self-align-left {
+	margin-right: auto;
+}
+
+
+
+
+/***************************************************************************/
+					/*************** PADDING **************/
+/***************************************************************************/
+
+
+/**
+*** All padding values are inside the box - use to create space between content 
+*** and module edge.  Module width will not change with padding.
+***
+***
+*** Use nested modules to create space between side-by-side elements with 
+*** background colors or images
+**/
+
+
+
+.padding-mini, 
+.padding-xs,
+.pxs {
+	padding: $mini;
+}
+
+.padding-small,
+.ps {
+	padding: $small;
+}
+
+.padding-medium,
+.pm {
+	padding: $medium;
+}
+
+.padding-large, 
+.pl {
+	padding: $large;
+}
+
+
+.padding-top-mini, 
+.ptxs {
+	padding-top:$mini;
+}
+
+.padding-top-small, 
+.pts {
+	padding-top: $small;
+}
+
+.padding-top-medium, 
+.ptm {
+	padding-top: $medium;
+}
+
+.padding-top-large, 
+.ptl {
+	padding-top: $large;
+}
+
+
+.padding-right-mini, 
+.prxs {
+	padding-right:$mini;
+}
+
+.padding-right-small, 
+.prs {
+	padding-right: $small;
+}
+
+.padding-right-medium, 
+.prm {
+	padding-right: $medium;
+}
+
+.padding-right-large,
+.prl {
+	padding-right: $large;
+}
+
+
+.padding-bottom-mini, 
+.pbxs {
+	padding-bottom:$mini;
+}
+
+.padding-bottom-small, 
+.pbs {
+	padding-bottom: $small;
+}
+
+.padding-bottom-medium, 
+.pbm {
+	padding-bottom: $medium;
+}
+
+.padding-bottom-large, 
+.pbl {
+	padding-bottom: $large;
+}
+
+
+.padding-left-mini,
+.plxs {
+	padding-left:$mini;
+}
+
+.padding-left-small,
+.pls {
+	padding-left: $small;
+}
+
+.padding-left-medium,
+.plm {
+	padding-left: $medium;
+}
+
+.padding-left-large,
+.pll {
+	padding-left: $large;
+}
+
+
+/***************************************************************************/
+					/*************** MARGIN **************/
+/***************************************************************************/
+
+.margin-mini,
+.margin-xs,
+.mxs {
+	margin: $mini;
+}
+
+.margin-small,
+.ms {
+	margin: $small;
+}
+
+.margin-medium,
+.mm {
+	margin: $medium;
+}
+
+.margin-large,
+.ml {
+	margin: $large;
+}
+
+.margin-xl,
+.mxl {
+	margin: $xl;
+}
+
+.margin-top-mini,
+.mtxs {
+	margin-top: $mini;
+}
+
+.margin-top-small,
+.mts {
+	margin-top: $small;
+}
+
+.margin-top-medium,
+.mtm,
+.margin-top,
+.mt {
+	margin-top: $medium;
+}
+
+.margin-top-large,
+.mtl {
+	margin-top: $large;
+}
+
+.margin-top-xl,
+.mtxl {
+	margin-top: $xl;
+}
+
+.margin-right-mini,
+.mrxs {
+	margin-right: $mini;
+}
+
+.margin-right-small,
+.mrs {
+	margin-right: $small;
+}
+
+.margin-right-medium,
+.mrm,
+.margin-right,
+.mr {
+	margin-right: $medium;
+}
+
+.margin-right-large,
+.mrl {
+	margin-right: $large;
+}
+
+.margin-right-xl,
+.mrxl {
+	margin-right: $xl;
+}
+
+.margin-bottom-mini,
+.mbxs {
+	margin-bottom: $mini;
+}
+
+.margin-bottom-small,
+.mbs {
+	margin-bottom: $small;
+}
+
+.margin-bottom-medium,
+.mbm,
+.margin-bottom,
+.mb {
+	margin-bottom: $medium;
+}
+
+.margin-bottom-large,
+.mbl {
+	margin-bottom: $large;
+}
+
+.margin-bottom-xl,
+.mbxl {
+	margin-bottom: $xl;
+}
+
+.margin-left-mini,
+.mlxs {
+	margin-left: $mini;
+}
+
+.margin-left-small,
+.mls {
+	margin-left: $small;
+}
+
+.margin-left-medium,
+.mlm,
+.margin-left,
+.ml {
+	margin-left: $medium;
+}
+
+.margin-left-large,
+.mll {
+	margin-left: $large;
+}
+
+.margin-left-xl,
+.mlxl {
+	margin-left: $xl;
+}
+
+.margin-center {
+	margin: 0 auto;
+}
+
+
+
+/***************************************************************************/
+/*************** YOUR OVERRIDES AND CUSTOMIZATIONS BELOW HERE **************/
+/***************************************************************************/
+
+
+
+
+
+/***************************************************************************/
+				/*************** MOBILE STYLE **************/
+/***************************************************************************/
+@media (min-width: 1400px) {
+	
+}
+
+@media (max-width: 1024px) {
+	.per10.no-collapse,
+	.per20.no-collapse,
+	.per25.no-collapse, 
+	.per30.no-collapse,
+	.per40.no-collapse,
+	.per50.no-collapse,
+	.per60.no-collapse,
+	.per70.no-collapse,
+	.per75.no-collapse,
+	.per80.no-collapse,
+	.per90.no-collapse {
+		width: initial;
+	}
+	
+	.tab-per10,
+	.p10-tab {
+		width: 10%;
+	}
+
+	.tab-per20,
+	.p20-tab {
+		width: 20%;
+	}
+
+	.tab-per25,
+	.p25-tab {
+		width: 25%;
+	}
+
+	.tab-per30,
+	.p30-tab {
+		width: 30%;
+	}
+
+	.tab-per33,
+	.p33-tab {
+		width: 33.333%;
+	}
+
+	.tab-per40,
+	.p40-tab {
+		width: 40%;
+	}
+
+	.tab-per50,
+	.p50-tab {
+		width: 50%;
+	}
+
+	.tab-per60,
+	.p60-tab {
+		width: 60%;
+	}
+	
+	.p66-tab {
+		width: 66.66667%;
+	}
+
+	.tab-per70,
+	.p70-tab {
+		width: 70%;
+	}
+
+	.tab-per75,
+	.p75-tab {
+		width: 75%;
+	}
+
+	.tab-per80,
+	.p80-tab
+	 {
+		width: 80%;
+	}
+
+	.tab-per90,
+	.p90-tab {
+		width: 90%;
+	}
+
+	.tab-per100,
+	.p100-tab {
+		width: 100%;
+	}
+	
+	
+	.tab-order-1 {
+		order: 1;
+	}
+	
+	.tab-order-2 {
+		order: 2;
+	}
+	
+	.tab-order-3 {
+		order: 3;
+	}
+	
+	.tab-order-4 {
+		order: 4;
+	}
+	
+	.tab-order-5 {
+		order: 5;
+	}
+	
+	.tab-order-6 {
+		order: 6;
+	}
+	
+	.tab-order-7 {
+		order: 7;
+	}
+	
+	.tab-order-8 {
+		order: 8;
+	}
+	
+	.tab-order-9 {
+		order: 9;
+	}
+	
+	.tab-order-10 {
+		order: 10;
+	}
+}
+	
+	
+@media (max-width: 768px) {
+	.banner {
+		padding: $large 0px;
+	}
+	
+	.container {
+		width: 95%;
+	}
+	
+	.module {
+		margin-bottom: $medium;
+	}
+	
+	.module:last-of-type {
+		margin-bottom: 0;
+	}
+	
+	.per10,
+	.per20,
+	.per25,
+	.per30,
+	.per33,
+	.per40,
+	.per50,
+	.per60,
+	.per70,
+	.per75,
+	.per80,
+	.per90,
+	.per100,
+	.p10,
+	.p15,
+	.p20,
+	.p25,
+	.p30,
+	.p35,
+	.p40,
+	.p45,
+	.p50,
+	.p55,
+	.p60,
+	.p65,
+	.p70,
+	.p75,
+	.p80,
+	.p85,
+	.p90,
+	.p95,
+	.p100,
+	.p10-tab,
+	.p15-tab,
+	.p20-tab,
+	.p25-tab,
+	.p30-tab,
+	.p35-tab,
+	.p40-tab,
+	.p45-tab,
+	.p50-tab,
+	.p55-tab,
+	.p60-tab,
+	.p65-tab,
+	.p70-tab,
+	.p75-tab,
+	.p80-tab,
+	.p85-tab,
+	.p90-tab,
+	.p95-tab,
+	.p100-tab {
+		width: 100%;
+	}
+	
+	
+	.mob-per10,
+	.p10-mob {
+		width: 10%;
+	}
+
+	.mob-per20,
+	.p20-mob {
+		width: 20%;
+	}
+
+	.mob-per25,
+	.p25-mob {
+		width: 25%;
+	}
+
+	.mob-per30,
+	.p30-mob {
+		width: 30%;
+	}
+
+	.mob-per33,
+	.p33-mob {
+		width: 33.333%;
+	}
+
+	.mob-per40,
+	.p40-mob {
+		width: 40%;
+	}
+
+	.mob-per50,
+	.p50-mob {
+		width: 50%;
+	}
+
+	.mob-per60,
+	.p60-mob {
+		width: 60%;
+	}
+	
+	.mob-per60,
+	.p66-mob {
+		width: 66.66667%;
+	}
+
+	.mob-per70,
+	.p70-mob {
+		width: 70%;
+	}
+
+	.mob-per75,
+	.p75-mob {
+		width: 75%;
+	}
+
+	.mob-per80,
+	.p80-mob {
+		width: 80%;
+	}
+
+	.mob-per90,
+	.p90-mob {
+		width: 90%;
+	}
+
+	.mob-per100,
+	.p100-mob {
+		width: 100%;
+	}
+	
+	
+	.mob-order-1 {
+		order: 1;
+	}
+	
+	.mob-order-2 {
+		order: 2;
+	}
+	
+	.mob-order-3 {
+		order: 3;
+	}
+	
+	.mob-order-4 {
+		order: 4;
+	}
+	
+	.mob-order-5 {
+		order: 5;
+	}
+	
+	.mob-order-6 {
+		order: 6;
+	}
+	
+	.mob-order-7 {
+		order: 7;
+	}
+	
+	.mob-order-8 {
+		order: 8;
+	}
+	
+	.mob-order-9 {
+		order: 9;
+	}
+	
+	.mob-order-10 {
+		order: 10;
+	}
+	
+	
+	/* OPTIONAL, TO ENSURE EVERY ELEMENT IS CENTERED */
+	.text-left,
+	.text-right {
+		text-align: center;
+	}
+	
+	body :not(.p10-mob)
+	:not(.p20-mob)
+	:not(.p25-mob)
+	:not(.p30-mob)
+	:not(.p33-mob)
+	:not(.p40-mob)
+	:not(.p50-mob)
+	:not(.p60-mob)
+	:not(.p66-mob)
+	:not(.p70-mob)
+	:not(.p75-mob)
+	:not(.p80-mob)
+	:not(.p90-mob)
+	:not(.p100-mob) {
+		.padding-left-mini, .plxs,
+		.padding-left-small, .pls,
+		.padding-left-medium, .plm,
+		.padding-left-large, .pll {
+			padding-left: 0;
+		}
+		
+		.padding-right-mini, .prxs,
+		.padding-right-small, .prs,
+		.padding-right-medium, .prm
+		.padding-right-large, .prl {
+			padding-right: 0;
+		}
+		
+		.margin-left {
+			margin-left: 0;
+		}
+	
+		.margin-right {
+			margin-right: 0;
+		}	
+	}
+}
+

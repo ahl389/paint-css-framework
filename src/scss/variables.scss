@@ -1,0 +1,27 @@
+/* Padding, margin */
+$mini: 8px;
+$small: 15px;
+$medium: 30px;
+$large: 50px;
+$xl: 100px;
+
+/* Font */
+$mini-font: .6em;
+$small-font: .8em;
+$medium-font: 1em;
+$large-font: 1.25em;
+$xl-font: 1.5em;
+$x2-font: 2em;
+$x3-font: 3em;
+$x4-font: 4em;
+
+/* Breakpoints */
+$mobile: 768px;
+$tablet: 1024px;
+
+/* Colors */
+$primary-color: #555;
+$secondary-color: #fefe77;
+$accent-color: #76cdcd;
+$panel-color: $secondary-color;
+$button-color: $accent-color;
