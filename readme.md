@@ -14,7 +14,7 @@
 Paint is a simple, lightweight, modular CSS framework that allows you rapidly layout and style responsive websites without 
 having to write much additional CSS.
 
-[Check out the example site, built entirely with Paint and regular HTML](https://ahl389.github.io/Paint-CSS-Framework/)
+[Check out the example site, built entirely with Paint and regular HTML](https://ahl389.github.io/paint-css-framework/)
 
 ## Setup
 Grab the source paint.css file and save in your project's CSS directory. This file is designed to be your primary stylesheet.
