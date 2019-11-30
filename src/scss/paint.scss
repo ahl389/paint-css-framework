@@ -1,3 +1,6 @@
+@import "variables";
+@import "reset";
+
 /* BASIC ELEMENTS */
 
 /**
@@ -118,6 +121,10 @@ button,
 	text-transform: lowercase;
 }
 
+.capitalize {
+	text-transform: capitalize;
+}
+
 .bold {
 	font-weight: bold;
 }
@@ -149,9 +156,7 @@ button,
 }
 
 .container,
-.container-extender,
-.container-inner,
-.module-container {
+.container-extender {
     display: -webkit-box;  
     display: -ms-flexbox;  
     display: -webkit-flex;
@@ -166,19 +171,13 @@ button,
 	margin: 0 auto;
 }
 
-.container-extender,
-.container-inner,
-.module-container {
+.container-inner
+.container-extender {
 	width: 100%;
 }
 
 .container-extender {
 	max-width: initial;
-}
-
-.container-inner {
-	max-width: 650px;
-	flex: 0 1 auto;
 }
 
 .module {
@@ -189,7 +188,6 @@ button,
 		width: 100%;
 	}
 }
-
 
 
 

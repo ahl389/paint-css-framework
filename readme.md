@@ -17,7 +17,7 @@ having to write much additional CSS.
 [Check out the example site, built entirely with Paint and regular HTML](https://ahl389.github.io/paint-css-framework/)
 
 ## Setup
-Grab the source paint.css file and save in your project's CSS directory. This file is designed to be your primary stylesheet.
+Head to the `src/SCSS` directory and grab the `paint.scss file`, along with the `reset.scss` and `variables.scss` files, and save them in your project's CSS directory. `paint.scss` file is designed to be your primary stylesheet, but doesn't have to be. If want an additional stylesheet, just dont forget to import `paint.scss`.
 
 ## Getting Started with Paint
 Paint is simple enough that getting acquainted and starting to build your website can happen in minutes.
@@ -36,10 +36,11 @@ Each section must have the class 'banner'.
 </section>
 ```
 
+Banner elements don't get `painted`! But many times you may want to use an `id` or special `class` to add background styling or custom padding sizes.
+
 #### Container
 
-Within each section block, you will have a container element.  The default container element is set to 90%
-of the page width, is centered, and has a max-width of 1200px.  
+Within each section block, you will have immediately have a `div` element with the class `container`.  The default container element is set to 90% of the page width, is centered, and has a max-width of 1200px.  
 
 ```html
 <section class = "banner" id = "banner-your-id">
@@ -47,6 +48,10 @@ of the page width, is centered, and has a max-width of 1200px.
 	</div>
 </section>
 ```
+
+Container elements can be painted with the following types of classes (see [classes](#classes) section):
++ [Fonts & Text](#fonts-and-text) (Note: These will be applied to the entire contents of the container)
++ [Content Alignment within Containers](#container-alignment)
 
 #### Module
 
@@ -85,8 +90,6 @@ Available classes include:
 + .banner
 + .container
 + .container-extender
-+ .container-inner
-+ .module-container
 + .module
 
 
@@ -97,16 +100,18 @@ Available classes include:
 + .panel.highlight
 
 
-##### Fonts & Text
+##### Fonts and Text
 + .mini (.6em)
 + .small (.8em)
 + .medium (1em)
 + .large (1.25em)
-+ .x2 (2em)
-+ .x3 (3em)
++ .xl (1.75em)
++ .x2 (2.5em)
++ .x3 (3.5em)
 + .x4 (4em)
 + .uppercase
 + .lowercase
++ .capitalize
 + .bold
 + .italic
 
@@ -114,51 +119,58 @@ Available classes include:
 ##### Module Width
 Each of these classes indicate a percentage width.  Adding a padding class to any module will not alter its outer width.
 
-+ .per10
-+ .per20
-+ .per25
-+ .per30
-+ .per33 (33.33%)
-+ .per40
-+ .per50
-+ .per60
-+ .per70
-+ .per75
-+ .per80
-+ .per90
-+ .per100
++ .p10
++ .p15
++ .p20
++ .p25
++ .p30
++ .p33 (33.33%)
++ .p35
++ .p40
++ .p45
++ .p50
++ .p55
++ .p60
++ .p65
++ .p70
++ .p75
++ .p80
++ .p85
++ .p90
++ .p95
++ .p100
 
 
 ##### Module Width (Tablet)
-+ .tab-per10
-+ .tab-per20
-+ .tab-per25
-+ .tab-per30
-+ .tab-per33 (33.33%)
-+ .tab-per40
-+ .tab-per50
-+ .tab-per60
-+ .tab-per70
-+ .tab-per75
-+ .tab-per80
-+ .tab-per90
-+ .tab-per100
++ .p10-tab
++ .p20-tab
++ .p25-tab
++ .p30-tab
++ .p33-tab (33.33%)
++ .p40-tab
++ .p50-tab
++ .p60-tab
++ .p70-tab
++ .p75-tab
++ .p80-tab
++ .p90-tab
++ .p100-tab
 
 
 ##### Module Width (Mobile)
-+ .mob-per10
-+ .mob-per20
-+ .mob-per25
-+ .mob-per30
-+ .mob-per33 (33.33%)
-+ .mob-per40
-+ .mob-per50
-+ .mob-per60
-+ .mob-per70
-+ .mob-per75
-+ .mob-per80
-+ .mob-per90
-+ .mob-per100
++ .p10-mob
++ .p20-mob
++ .p25-mob
++ .p30-mob
++ .p33-mob (33.33%)
++ .p40-mob
++ .p50-mob
++ .p60-mob
++ .p70-mob
++ .p75-mob
++ .p80-mob
++ .p90-mob
++ .p100-mob
 
 
 ##### Module Order (Tablet)
@@ -191,7 +203,7 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .text-right
 
 
-##### To Align All Modules Within a Container (Apply to container)
+##### To Align All Modules Within a Container (Apply to container)<a name="container-alignment">
 + .align-left 
 + .align-center 
 + .align-right 
