@@ -55,8 +55,8 @@ Container elements can be painted with the following types of classes (see [clas
 
 #### Module
 
-Module elements are created inside container elements.  Modules are your more basic content block/element.
-They will automatically flow from left to right. At the very least, you assign each module a width class.
+Module elements are created inside container elements.  Modules are your basic content block/element.
+They will automatically flow from left to right. In most use cases, you will paint them with a `width` class, but it's not required. If you don't paint them with a `width` class, then they assume their natural width. THis is useful when creating navigation bars, for example.
 
 ```html
 <section class = "banner" id = "banner-your-id">
@@ -66,6 +66,15 @@ They will automatically flow from left to right. At the very least, you assign e
 	</div>
 </section>
 ```
+
+Modules can be assigned any or all of the following [class types](#classes):
++ [Fonts & Text](#fonts-and-text) (Note: These will be applied to the entire contents of the module)
++ [Individual Module Alignment within Container](#module-alignment)
++ [Module Width](#width) (Including Module Width on Tablet and Mobile)
++ [Module Order](#order) (Including Module Order on Tablet and Mobile)
++ [Padding](#padding)
++ [Margin](#margin)
+
 
 ## Classes
 
@@ -77,30 +86,30 @@ Typical order of class application is as follows:
 width, panel, padding, margin, alignment, font styles
 
 ```html
-<div class = "module per80 panel padding-small margin-top margin-bottom">
+<div class = "module per80 panel padding-small margin-right margin-bottom">
 	<h3 class = "bold">H3 Heading</h3>
-	<p class = "margin-top italic">Content</p>
+	<p class = "margin-right italic">Content</p>
 </div>
 ```
 
 
 Available classes include:
 
-##### Building Blocks
+#### Building Blocks
 + .banner
 + .container
 + .container-extender
 + .module
 
 
-##### General
+#### General
 
 + .button
 + .panel
 + .panel.highlight
 
 
-##### Fonts and Text
+#### Fonts and Text
 + .mini (.6em)
 + .small (.8em)
 + .medium (1em)
@@ -114,66 +123,72 @@ Available classes include:
 + .capitalize
 + .bold
 + .italic
++ .text-left (default)
++ .text-center
++ .text-right
 
 
-##### Module Width
-Each of these classes indicate a percentage width.  Adding a padding class to any module will not alter its outer width.
+#### Module Width<a name="width"></a>
+Each of these classes indicate a percentage width (the `w` in front of each number is for `width`) relative to its parent container or module.  Adding a padding class to any module will not alter its outer width.
 
-+ .p10
-+ .p15
-+ .p20
-+ .p25
-+ .p30
-+ .p33 (33.33%)
-+ .p35
-+ .p40
-+ .p45
-+ .p50
-+ .p55
-+ .p60
-+ .p65
-+ .p70
-+ .p75
-+ .p80
-+ .p85
-+ .p90
-+ .p95
-+ .p100
+#### Desktop
 
-
-##### Module Width (Tablet)
-+ .p10-tab
-+ .p20-tab
-+ .p25-tab
-+ .p30-tab
-+ .p33-tab (33.33%)
-+ .p40-tab
-+ .p50-tab
-+ .p60-tab
-+ .p70-tab
-+ .p75-tab
-+ .p80-tab
-+ .p90-tab
-+ .p100-tab
++ .w10
++ .w15
++ .w20
++ .w25
++ .w30
++ .w33 (33.33%)
++ .w35
++ .w40
++ .w45
++ .w50
++ .w55
++ .w60
++ .w65
++ .w70
++ .w75
++ .w80
++ .w85
++ .w90
++ .w95
++ .w100
 
 
-##### Module Width (Mobile)
-+ .p10-mob
-+ .p20-mob
-+ .p25-mob
-+ .p30-mob
-+ .p33-mob (33.33%)
-+ .p40-mob
-+ .p50-mob
-+ .p60-mob
-+ .p70-mob
-+ .p75-mob
-+ .p80-mob
-+ .p90-mob
-+ .p100-mob
+##### Tablet
++ .w10-tab
++ .w20-tab
++ .w25-tab
++ .w30-tab
++ .w33-tab (33.33%)
++ .w40-tab
++ .w50-tab
++ .w60-tab
++ .w70-tab
++ .w75-tab
++ .w80-tab
++ .w90-tab
++ .w100-tab
 
 
-##### Module Order (Tablet)
+##### Mobile
++ .w10-mob
++ .w20-mob
++ .w25-mob
++ .w30-mob
++ .w33-mob (33.33%)
++ .w40-mob
++ .w50-mob
++ .w60-mob
++ .w70-mob
++ .w75-mob
++ .w80-mob
++ .w90-mob
++ .w100-mob
+
+#### Order<a name="order"></a>
+
+##### Tablet
 + .tab-order-1
 + .tab-order-2
 + .tab-order-3
@@ -185,7 +200,7 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .tab-order-9
 
 
-##### Module Order (Mobile)
+##### Mobile
 + .mob-order-1
 + .mob-order-2
 + .mob-order-3
@@ -196,54 +211,85 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 + .mob-order-8
 + .mob-order-9
 
-
-##### Text Alignment
-+ .text-left (default)
-+ .text-center
-+ .text-right
-
-
-##### To Align All Modules Within a Container (Apply to container)<a name="container-alignment">
+#### Alignment<a name="alignment"></a>
+##### To Align All Modules Within a Container (Apply to container)<a name="container-alignment"></a>
 + .align-left 
 + .align-center 
 + .align-right 
-+ .align-top
++ .align-right
 + .align-middle 
 + .align-bottom 
 + .align-stretch 
 
 
-##### To Align Individual Modules (Apply to module)
-+ .self-align-top
+##### To Align Individual Modules (Apply to module)<a name="module-alignment"></a>
++ .self-align-right
 + .self-align-middle 
 + .self-align-bottom
 + .self-align-left
 + .self-align-right
 
+#### Padding<a name="padding"></a>
+##### All Four Sides
++ .pxs, .padding-mini (8px)
++ .ps, .padding-small (15px)
++ .pm, .padding-medium (30px)
++ .pl, .padding-large (50px)
 
-##### Padding - 4 Sides
-+ .padding-mini (8px)
-+ .padding-small (15px)
-+ .padding-medium (30px)
-+ .padding-large (50px)
+##### Top
++ .ptxs, .padding-top-mini (8px)
++ .pts, .padding-top-small (15px)
++ .ptm, .padding-top-medium (30px)
++ .ptl, .padding-top-large (50px)
 
+##### Right
++ .prxs, .padding-right-mini (8px)
++ .prs, .padding-right-small (15px)
++ .prm, .padding-right-medium (30px)
++ .prl, .padding-right-large (50px)
 
-##### Padding - 1 Side 
-+ .padding-top-mini (8px)
-+ .padding-top-small (15px)
-+ .padding-top-medium (30px)
-+ .padding-top-large (50px)
-+ .padding-right-mini(-small, -medium, -large)
-+ .padding-bottom-mini(-small, -medium, -large)
-+ .padding-left-mini(-small, -medium, -large)
+##### Bottom
++ .pbxs, .padding-bottom-mini (8px)
++ .pbs, .padding-bottom-small (15px)
++ .pbm, .padding-bottom-medium (30px)
++ .pbl, .padding-bottom-large (50px)
 
+##### Left
++ .plxs, .padding-left-mini (8px)
++ .pls, .padding-left-small (15px)
++ .plm, .padding-left-medium (30px)
++ .pll, .padding-left-large (50px)
 
-##### Margin - 1 side (All 30px)
-+ .margin-top
-+ .margin-right
-+ .margin-bottom
-+ .margin-left
-+ .margin-center
+#### Margin<a name="margin"></a>
+##### All Four Sides
++ .mxs, .margin-mini (8px)
++ .ps, .margin-small (15px)
++ .pm, .margin-medium (30px)
++ .ml, .margin-large (50px)
+
+##### Top
++ .mtxs, .margin-top-mini (8px)
++ .mts, .margin-top-small (15px)
++ .mtm, .margin-top-medium (30px)
++ .mtl, .margin-top-large (50px)
+
+##### Right
++ .mrxs, .margin-right-mini (8px)
++ .mrs, .margin-right-small (15px)
++ .mrm, .margin-right-medium (30px)
++ .mrl, .margin-right-large (50px)
+
+##### Bottom
++ .mbxs, .margin-bottom-mini (8px)
++ .mbs, .margin-bottom-small (15px)
++ .mbm, .margin-bottom-medium (30px)
++ .mbl, .margin-bottom-large (50px)
+
+##### Left
++ .mlxs, .margin-left-mini (8px)
++ .mls, .margin-left-small (15px)
++ .mlm, .margin-left-medium (30px)
++ .mll, .margin-left-large (50px)
 
 ## Usage Examples
 
@@ -264,14 +310,16 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 ```html
 <section class = "banner" id = "banner-three-columns">
 	<div class = "container align-center">
-		<div class = "module per33">
-			<!-- content -->
+		<div class = "module p33">
+			<!-- module equal to 33% of container -->
 		</div>
-		<div class = "module per33">
-			<!-- content -->
+
+		<div class = "module p33">
+			<!-- module equal to 33% of container -->
 		</div>
-		<div class = "module per33">
-			<!-- content -->
+
+		<div class = "module p33">
+			<!-- module equal to 33% of container -->
 		</div>
 	</div>
 </section>
@@ -282,16 +330,19 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 ```html
 <section class = "banner" id = "banner-sub-column">
 	<div class = "container align-center">
-		<div class = "module per50">
-			<!-- content -->
+		<div class = "module p50">
+			<!-- module equal to 50% of container -->
 		</div>
-		<div class = "module per50">
-			<div class = "module-container"
-				<div class = "module per40">
-					<!-- content -->
+
+		<div class = "module p50">
+			<div class = "container">
+				<!-- Note that any modules inside modules must be wrapped in a container -->
+
+				<div class = "module p40">
+					<!-- sub column equal to 40% of its parent module -->
 				</div>
-				<div class = "module per60">
-					<!-- content -->
+				<div class = "module p60">
+					<!-- sub column equal to 60% of its parent module -->
 				</div>
 			</div>
 		</div>
@@ -304,12 +355,24 @@ Each of these classes indicate a percentage width.  Adding a padding class to an
 ```html
 <section class = "banner" id = "banner-panel">
 	<div class = "container align-center">
-		<div class = "module per80 padding-right">
+		<div class = "module p80">
 			<!-- content -->
 		</div>
-		<div class = "module per20 padding-left">
-			<div class = "module per100 panel padding-medium">
-				<!-- content -->
+
+		<div class = "module p20 padding-left">
+			<!-- 	
+				This wrapper module with a padding-left class creates some
+				space between the adjacent module and the actual content 
+				of this module
+			-->
+			<div class = "container">
+				<div class = "module p100 panel padding-medium">
+					<!--
+						The panel class creates a background color to differentiate
+						it from any other content, and the padding-medium will create
+						space around the text content inside this module.
+					-->
+				</div>
 			</div>
 		</div>
 	</div>
