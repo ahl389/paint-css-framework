@@ -130,7 +130,7 @@ button,
 }
 
 .italic {
-	font-weight: italic;
+	text-decoration: italic;
 }
 
 .text-left {
@@ -156,6 +156,7 @@ button,
 }
 
 .container,
+.container-inner,
 .container-extender {
     display: -webkit-box;  
     display: -ms-flexbox;  
@@ -171,12 +172,8 @@ button,
 	margin: 0 auto;
 }
 
-.container-inner
 .container-extender {
 	width: 100%;
-}
-
-.container-extender {
 	max-width: initial;
 }
 
@@ -184,9 +181,20 @@ button,
 	flex: 0 1 auto;
 	box-sizing: border-box;
 	
-	.container {
+	.container,
+	.container-inner {
 		width: 100%;
 	}
+}
+
+$i: 5;
+
+@while $i < 100 {
+  .w#{$i} .container-inner {
+	  max-width: (#{$i} * 1300px)/100;
+  }
+  
+  $i: $i + 5;
 }
 
 
@@ -685,77 +693,101 @@ button,
 	.per70.no-collapse,
 	.per75.no-collapse,
 	.per80.no-collapse,
-	.per90.no-collapse {
+	.per90.no-collapse ,
+	.w10.no-collapse,
+	.w20.no-collapse,
+	.w25.no-collapse, 
+	.w30.no-collapse,
+	.w40.no-collapse,
+	.w50.no-collapse,
+	.w60.no-collapse,
+	.w70.no-collapse,
+	.w75.no-collapse,
+	.w80.no-collapse,
+	.w90.no-collapse{
 		width: initial;
 	}
 	
 	.tab-per10,
-	.p10-tab {
+	.p10-tab,
+	.w10-tab {
 		width: 10%;
 	}
 
 	.tab-per20,
-	.p20-tab {
+	.p20-tab,
+	.w20-tab  {
 		width: 20%;
 	}
 
 	.tab-per25,
-	.p25-tab {
+	.p25-tab,
+	.w25-tab  {
 		width: 25%;
 	}
 
 	.tab-per30,
-	.p30-tab {
+	.p30-tab,
+	.w30-tab  {
 		width: 30%;
 	}
 
 	.tab-per33,
-	.p33-tab {
+	.p33-tab,
+	.w33-tab  {
 		width: 33.333%;
 	}
 
 	.tab-per40,
-	.p40-tab {
+	.p40-tab,
+	.w40-tab  {
 		width: 40%;
 	}
 
 	.tab-per50,
-	.p50-tab {
+	.p50-tab,
+	.w50-tab  {
 		width: 50%;
 	}
 
 	.tab-per60,
-	.p60-tab {
+	.p60-tab,
+	.w60-tab  {
 		width: 60%;
 	}
 	
-	.p66-tab {
+	.p66-tab,
+	.w66-tab  {
 		width: 66.66667%;
 	}
 
 	.tab-per70,
-	.p70-tab {
+	.p70-tab,
+	.w70-tab  {
 		width: 70%;
 	}
 
 	.tab-per75,
-	.p75-tab {
+	.p75-tab,
+	.w75-tab  {
 		width: 75%;
 	}
 
 	.tab-per80,
-	.p80-tab
-	 {
+	.p80-tab,
+	.w80-tab {
 		width: 80%;
 	}
 
 	.tab-per90,
-	.p90-tab {
+	.p90-tab,
+	.w90-tab  {
 		width: 90%;
 	}
 
 	.tab-per100,
-	.p100-tab {
+	.p100-tab,
+	.w100-tab  {
 		width: 100%;
 	}
 	
@@ -837,6 +869,7 @@ button,
 	.p20,
 	.p25,
 	.p30,
+	.p33,
 	.p35,
 	.p40,
 	.p45,
@@ -851,11 +884,32 @@ button,
 	.p90,
 	.p95,
 	.p100,
+	.w10,
+	.w15,
+	.w20,
+	.w25,
+	.w30,
+	.w33,
+	.w35,
+	.w40,
+	.w45,
+	.w50,
+	.w55,
+	.w60,
+	.w65,
+	.w70,
+	.w75,
+	.w80,
+	.w85,
+	.w90,
+	.w95,
+	.w100,
 	.p10-tab,
 	.p15-tab,
 	.p20-tab,
 	.p25-tab,
 	.p30-tab,
+	.p33-tab,
 	.p35-tab,
 	.p40-tab,
 	.p45-tab,
@@ -869,78 +923,112 @@ button,
 	.p85-tab,
 	.p90-tab,
 	.p95-tab,
-	.p100-tab {
+	.p100-tab,
+	.w10-tab,
+	.w15-tab,
+	.w20-tab,
+	.w25-tab,
+	.w30-tab,
+	.w33-tab,
+	.w35-tab,
+	.w40-tab,
+	.w45-tab,
+	.w50-tab,
+	.w55-tab,
+	.w60-tab,
+	.w65-tab,
+	.w70-tab,
+	.w75-tab,
+	.w80-tab,
+	.w85-tab,
+	.w90-tab,
+	.w95-tab,
+	.w100-tab {
 		width: 100%;
 	}
 	
 	
 	.mob-per10,
-	.p10-mob {
+	.p10-mob,
+	.w10-mob {
 		width: 10%;
 	}
 
 	.mob-per20,
-	.p20-mob {
+	.p20-mob,
+	.w20-mob {
 		width: 20%;
 	}
 
 	.mob-per25,
-	.p25-mob {
+	.p25-mob,
+	.w25-mob {
 		width: 25%;
 	}
 
 	.mob-per30,
-	.p30-mob {
+	.p30-mob,
+	.w30-mob {
 		width: 30%;
 	}
 
 	.mob-per33,
-	.p33-mob {
+	.p33-mob,
+	.w33-mob {
 		width: 33.333%;
 	}
 
 	.mob-per40,
-	.p40-mob {
+	.p40-mob,
+	.w40-mob {
 		width: 40%;
 	}
 
 	.mob-per50,
-	.p50-mob {
+	.p50-mob,
+	.w50-mob {
 		width: 50%;
 	}
 
 	.mob-per60,
-	.p60-mob {
+	.p60-mob,
+	.w60-mob {
 		width: 60%;
 	}
 	
 	.mob-per60,
-	.p66-mob {
+	.p66-mob,
+	.w66-mob {
 		width: 66.66667%;
 	}
 
 	.mob-per70,
-	.p70-mob {
+	.p70-mob,
+	.w70-mob {
 		width: 70%;
 	}
 
 	.mob-per75,
-	.p75-mob {
+	.p75-mob,
+	.w75-mob {
 		width: 75%;
 	}
 
 	.mob-per80,
-	.p80-mob {
+	.p80-mob,
+	.w80-mob {
 		width: 80%;
 	}
 
 	.mob-per90,
-	.p90-mob {
+	.p90-mob,
+	.w90-mob {
 		width: 90%;
 	}
 
 	.mob-per100,
-	.p100-mob {
+	.p100-mob,
+	.w100-mob {
 		width: 100%;
 	}
 	
@@ -1005,26 +1093,56 @@ button,
 	:not(.p75-mob)
 	:not(.p80-mob)
 	:not(.p90-mob)
-	:not(.p100-mob) {
-		.padding-left-mini, .plxs,
-		.padding-left-small, .pls,
-		.padding-left-medium, .plm,
-		.padding-left-large, .pll {
-			padding-left: 0;
+	:not(.p100-mob)
+	:not(.w10-mob)
+	:not(.w20-mob)
+	:not(.w25-mob)
+	:not(.w30-mob)
+	:not(.w33-mob)
+	:not(.w40-mob)
+	:not(.w50-mob)
+	:not(.w60-mob)
+	:not(.w66-mob)
+	:not(.w70-mob)
+	:not(.w75-mob)
+	:not(.w80-mob)
+	:not(.w90-mob)
+	:not(.w100-mob) {
+		.padding-left-mini, 
+		.plxs,
+		.padding-left-small, 
+		.pls,
+		.padding-left-medium, 
+		.plm,
+		.padding-left-large, 
+		.pll {
+			padding-left: 0px;
 		}
 		
-		.padding-right-mini, .prxs,
-		.padding-right-small, .prs,
-		.padding-right-medium, .prm
-		.padding-right-large, .prl {
+		.padding-right-mini, 
+		.prxs,
+		.padding-right-small, 
+		.prs,
+		.padding-right-medium, 
+		.prm,
+		.padding-right-large, 
+		.prl {
 			padding-right: 0;
 		}
 		
-		.margin-left {
+		.margin-left,
+		.mlxs,
+		.mls,
+		.mlm,
+		.mll {
 			margin-left: 0;
 		}
 	
-		.margin-right {
+		.margin-right,
+		.mrxs,
+		.mrs,
+		.mrm,
+		.mrl {
 			margin-right: 0;
 		}	
 	}

@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width" http-equiv="Content-Type">
 <title>Paint CSS</title>
-<link rel="stylesheet" type="text/css" href="example.css">
+<link rel="stylesheet" type="text/css" href="src/css/paint_v2.css">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:200,400,700" rel="stylesheet" type="text/css">
 <script src="https://use.fontawesome.com/ba4ae401ed.js"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -12,11 +12,13 @@
 <body>
 <section class = "banner" id = "banner-top">
 	<div class = "container align-center text-center">
-		<div class = "module per70">
+		<div class = "module w70">
 			<h1>Welcome to Paint</h1>
+
 			<p class = "margin-top">Paint is CSS framework that let's you 'paint' on styles with easy to remember
 			classes.  It speeds up development time, makes code easy to maintain, and is <span class = "italic">
 			totally</span> modular. </p>
+
 			<p class = "large bold">Except for font family and color choices, no extra css was written to create this page.
 			What a time saver, eh?</p>
 			
@@ -29,19 +31,21 @@
 
 <section class = "banner" id = "banner-intro-to-modules">
 	<div class = "container align-center align-middle text-center">
-		<div class = "module per60 padding-right">
-			<h3 class = "margin-bottom">Here's the gist</h3>
+		<div class = "module w60 prm">
+			<h3 class = "mbm">Here's the gist</h3>
+			
 			<p>By structuring your HTML with the basic building blocks (section, container, module), it's extra simple to quickly
 			build gridded layouts. Rapidly stylize your site with simple stock classes to apply font sizes, weights, and decoration, 
 			width, alignments, padding, and margin.</p>
-			<p class = "margin-top small bold"><a href = "https://github.com/ahl389/Paint-CSS-Framework/tree/master/src">Get Paint here <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+			
+			<p class = "mtm small bold"><a href = "https://github.com/ahl389/Paint-CSS-Framework/tree/master/src">Get Paint here <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+			
 			<p class = "small bold"><a href = "https://github.com/ahl389/paint/blob/master/readme.md">See the documentation <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
-		
 		</div>
 		
-		<div class = "module per33 padding-left">
-			<div class = "module per100 align-left panel special padding-medium" id = "module-panel-example">
-				<h3 class = "margin-bottom">Completely Modular</h3>
+		<div class = "module w33 plm">
+			<div class = "module w100 align-left panel special pm" id = "module-panel-example">
+				<h3 class = "mbm">Completely Modular</h3>
 				<p>Adapt the existing settings to your own needs. Use what you want, scrap the rest.
 				Aside from the basic building blocks, no other class carries any dependencies.
 				It's simple to write overrides and customizations for individual elements.</p>
@@ -52,29 +56,29 @@
 
 <section class = "banner" id = "banner-three-columns">
 	<div class = "container align-top text-center">
-		<div class = "module per33 padding-small">
-			<i class="fa fa-file-code-o fa-4x margin-bottom" aria-hidden="true"></i>
-			<h3 class = "margin-bottom">Quick and Easy</h2>
+		<div class = "module w33 ps">
+			<i class="fa fa-file-code-o fa-4x mbm" aria-hidden="true"></i>
+			<h3 class = "mbm">Quick and Easy</h2>
 			<p>Paint lets you add styles without ever leaving your HTML file.</p>
 		</div>
 		
-		<div class = "module per33 padding-small">
+		<div class = "module w33 ps">
 			<i class="fa fa-th-large fa-4x margin-bottom" aria-hidden="true"></i>
-			<h3 class = "margin-bottom">Grid Layouts</h2>
+			<h3 class = "mbm">Grid Layouts</h2>
 			
-			<div class = "module-container">
-				<div class = "module per50 align-top padding-right-mini">
+			<div class = "container">
+				<div class = "module w50 align-top prs">
 					<p>By nesting modules you can quickly and easily create sub-columns</p> 
 				</div>
-				<div class = "module per50 align-top padding-left-mini">
+				<div class = "module w50 align-top pls">
 					<p>Layout your content in a snap, and almost entirely in HTML!</p>
 				</div>
 			</div>
 		</div>
 		
-		<div class = "module per33 padding-small">
-			<i class="fa fa-laptop fa-4x margin-bottom" aria-hidden="true"></i>
-			<h3 class = "margin-bottom">Responsive</h2>
+		<div class = "module w33 ps">
+			<i class="fa fa-laptop fa-4x mbm" aria-hidden="true"></i>
+			<h3 class = "mbm">Responsive</h2>
 			<p>Percentage based module widths means smooth transitions across all devices.</p>
 		</div>
 	</div>
@@ -82,11 +86,11 @@
 
 <section class = "banner" id = "banner-mobile">
 	<div class = "container align-center text-center">
-		<div class = "module per50">
-			<h2 class = "margin-bottom">Guess what?</h2>
+		<div class = "module w50">
+			<h2 class = "mbm">Guess what?</h2>
 			<p class = "bold">Paint is 100% mobile ready and responsive.</p>
 			<p>Paint's built-in mobile styles result in sites that gracefully collapse into a centered, single column.  All other style elements are preserved.</p>
-			<img class = "margin-top" src = "img/mobile.png">
+			<img class = "mtm" src = "img/mobile.png">
 	</div>
 </section>
 

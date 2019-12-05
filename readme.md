@@ -11,13 +11,12 @@
 
 
 ## Overview
-Paint is a simple, lightweight, modular CSS framework that allows you rapidly layout and style responsive websites without 
-having to write much additional CSS.
+Paint is a simple, lightweight, modular CSS framework that allows you rapidly layout and style responsive websites without having to write much additional CSS.
 
 [Check out the example site, built entirely with Paint and regular HTML](https://ahl389.github.io/paint-css-framework/)
 
 ## Setup
-Head to the `src/SCSS` directory and grab the `paint.scss file`, along with the `reset.scss` and `variables.scss` files, and save them in your project's CSS directory. `paint.scss` file is designed to be your primary stylesheet, but doesn't have to be. If want an additional stylesheet, just dont forget to import `paint.scss`.
+Head to the `src/SCSS` directory and grab the `paint.scss file`, along with the `reset.scss` and `variables.scss` files, and save them in your project's CSS directory. `paint.scss` file is designed to be your primary stylesheet, but doesn't have to be. If want an additional stylesheet, just dont forget to import `paint.scss`. Don't want to use `.scss`? No problem, make a copy of the `.css` file. The only downside to using the `.css` file is the loss of variables to make wholesale modifications/customizations to the base Paint styles.
 
 ## Getting Started with Paint
 Paint is simple enough that getting acquainted and starting to build your website can happen in minutes.
@@ -131,7 +130,7 @@ Available classes include:
 #### Module Width<a name="width"></a>
 Each of these classes indicate a percentage width (the `w` in front of each number is for `width`) relative to its parent container or module.  Adding a padding class to any module will not alter its outer width.
 
-#### Desktop
+##### Desktop
 
 + .w10
 + .w15
@@ -216,14 +215,14 @@ Each of these classes indicate a percentage width (the `w` in front of each numb
 + .align-left 
 + .align-center 
 + .align-right 
-+ .align-right
++ .align-top
 + .align-middle 
 + .align-bottom 
 + .align-stretch 
 
 
 ##### To Align Individual Modules (Apply to module)<a name="module-alignment"></a>
-+ .self-align-right
++ .self-align-top
 + .self-align-middle 
 + .self-align-bottom
 + .self-align-left
@@ -297,7 +296,7 @@ Each of these classes indicate a percentage width (the `w` in front of each numb
 ```html
 <section class = "banner" id = "banner-three-columns">
 	<div class = "container align-center">
-		<div class = "module per50">
+		<div class = "module w50">
 			<!-- content -->
 		</div>
 	</div>
@@ -310,15 +309,15 @@ Each of these classes indicate a percentage width (the `w` in front of each numb
 ```html
 <section class = "banner" id = "banner-three-columns">
 	<div class = "container align-center">
-		<div class = "module p33">
+		<div class = "module w33">
 			<!-- module equal to 33% of container -->
 		</div>
 
-		<div class = "module p33">
+		<div class = "module w33">
 			<!-- module equal to 33% of container -->
 		</div>
 
-		<div class = "module p33">
+		<div class = "module w33">
 			<!-- module equal to 33% of container -->
 		</div>
 	</div>
@@ -330,18 +329,18 @@ Each of these classes indicate a percentage width (the `w` in front of each numb
 ```html
 <section class = "banner" id = "banner-sub-column">
 	<div class = "container align-center">
-		<div class = "module p50">
+		<div class = "module w50">
 			<!-- module equal to 50% of container -->
 		</div>
 
-		<div class = "module p50">
+		<div class = "module w50">
 			<div class = "container">
 				<!-- Note that any modules inside modules must be wrapped in a container -->
 
-				<div class = "module p40">
+				<div class = "module w40">
 					<!-- sub column equal to 40% of its parent module -->
 				</div>
-				<div class = "module p60">
+				<div class = "module w60">
 					<!-- sub column equal to 60% of its parent module -->
 				</div>
 			</div>
@@ -355,18 +354,18 @@ Each of these classes indicate a percentage width (the `w` in front of each numb
 ```html
 <section class = "banner" id = "banner-panel">
 	<div class = "container align-center">
-		<div class = "module p80">
+		<div class = "module w80">
 			<!-- content -->
 		</div>
 
-		<div class = "module p20 padding-left">
+		<div class = "module w20 padding-left">
 			<!-- 	
 				This wrapper module with a padding-left class creates some
 				space between the adjacent module and the actual content 
 				of this module
 			-->
 			<div class = "container">
-				<div class = "module p100 panel padding-medium">
+				<div class = "module w100 panel padding-medium">
 					<!--
 						The panel class creates a background color to differentiate
 						it from any other content, and the padding-medium will create
@@ -381,22 +380,52 @@ Each of these classes indicate a percentage width (the `w` in front of each numb
 
 #### Full width / edge extended panel
 
-Notice the slightly different structure and container elements.
-The panel class can be applied to both module elements for a split screen
-color effect.
+Notice the slightly different container element. The panel class can be applied to both module elements for a split screen color effect.
 
 ```html
 <section class = "banner" id = "banner-special-case">
-	<div class = "container-extended align-center">
-		<div class = "module per50 panel align-right padding-medium">
-			<div class = "container-inner align-center">
-				<!-- content -->
-			</div>
+	<div class = "container-extender align-center">
+		<!-- 
+			The container-extender class creates a container that spans the full width
+			of the parent banner. There is no max-width. This means it's content will
+			also extend this wide.
+		-->
+		<div class = "module w50 panel pm">
+			<!-- content -->
 		</div>
-		<div class = "module per50 align-left padding-medium">
-			<div class = "container-inner align-center">
-				<!-- content -->
-			</div>
+
+		<div class = "module w50 pm">
+			<!-- content -->
+		</div>
+	</div>
+</section>
+```
+
+If this is not the desired behavior, for example: you may want the background style on each half of the page to extend to the edge of the page, but you want the content in each half to be bound by a normal container, then you can use this approach:
+
+```html
+<section class = "banner" id = "banner-special-case">
+	<div class = "container-extender align-center">
+		<div class = "module w50 panel">
+			<!-- altering the width of this module will shift the bound 1300px container left or right -->
+			<div class = "container align-right">
+				<div class = "container-inner">
+					<!-- the container-inner element is automatically bound based on the size of its parent -->
+					<div class = "module w100 pm">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<div class = "module w50">
+			<div class = "container align-left">
+				<div class = "container-inner">
+					<div class = "module w100 pm">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</div>
+			</div>	
 		</div>
 	</div>
 </section>

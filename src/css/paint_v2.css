@@ -924,9 +924,7 @@ button,
   .text-right {
     text-align: center; }
 
-  body :not(.p10-mob)
-  :not(.p20-mob)
-  :not(.p25-mob)
+  body :not(.p10-mob):not(.p20-mob):not(.p25-mob)
   :not(.p30-mob)
   :not(.p33-mob)
   :not(.p40-mob)
@@ -1148,7 +1146,7 @@ button,
   :not(.w80-mob)
   :not(.w90-mob)
   :not(.w100-mob) .pll {
-    padding-left: 0; }
+    padding-left: 0px; }
   body :not(.p10-mob)
   :not(.p20-mob)
   :not(.p25-mob)
