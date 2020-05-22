@@ -18,6 +18,7 @@ Paint is a simple, lightweight, modular CSS framework that allows you rapidly la
 ## Setup
 
 [SCSS](#scss) / [CSS](#css)
+
 ### SCSS
 
 Head to the `src/SCSS` directory in this repo and grab the following files:
@@ -26,6 +27,8 @@ Head to the `src/SCSS` directory in this repo and grab the following files:
 - `reset.scss`
 - `variables.scss`
 - `custom.scss`
+
+Paint handles all of the file imports into `paint.scss` for you.
 
 `paint.scss` is the primary file with the majority of Paint's relevant code. 
 
@@ -37,31 +40,36 @@ Head to the `src/SCSS` directory in this repo and grab the following files:
 
 ### CSS
 
+Don't want to use SCSS? No problem: head to `src/CSS` and download the `paint.css` file - this contains everything that's in the `.scss` version, but does not offer the flexibility of variables and easier modifications.
 
-Save these files to your project's CSS directory. `paint.scss` file is designed to be your primary stylesheet, but doesn't have to be. If want an additional stylesheet, just dont forget to import `paint.scss`. Don't want to use `.scss`? No problem, make a copy of the `.css` file. The only downside to using the `.css` file is the loss of variables to make wholesale modifications/customizations to the base Paint styles.
 
 ## Getting Started with Paint
-Paint is simple enough that getting acquainted and starting to build your website can happen in minutes.
+Paint is fast because with it, you can layout and build a page almost entirely with HTML. 
+Your styles are 'painted' on to your HTML elements via a series of basic CSS classes.  
+For this to work, your HTML must be structured using Paint's basic building blocks: [`banner`](#banner), [`container`](#container), and [`module`](#module).
 
-The idea is that Paint lets you 'paint' on styles to your HTML elements by applying a series of basic,
-easy to remember classes.  For this to work, your HTML must be structured using Paint's basic building
-blocks: section, container, and module.
+We'll go through each of  these below: 
 
-#### Section
+### Banner
 
-Sections are page-wide elements that you use to organize the major parts of a webpage in a vertical manner.
-Each section must have the class 'banner'.  
+Banners are page-wide elements that you use to organize and divide the major content of your webpage vertically. 
+As a general rule, if you want to use a different background, or use a new subtitle on a page, you probably want to create a new `banner`.
+
+To create a `banner`, make a `section` HTML element, and give it the class `banner`.  
 
 ```html
 <section class = "banner" id = "banner-your-id">
 </section>
 ```
 
-Banner elements don't get `painted`! But many times you may want to use an `id` or special `class` to add background styling or custom padding sizes.
+> Note: Banner elements don't get `painted`! But it's likely that you'll want to give them an `id` or special `class` to add background styling or custom padding sizes.
 
 #### Container
 
-Within each section block, you will have immediately have a `div` element with the class `container`.  The default container element is set to 90% of the page width, is centered, and has a max-width of 1200px.  
+Within each section block, you will have immediately have a `div` element with the class `container`.  
+
+The default container element is set to 90% of the page width, is centered, and has a max-width of 1200px. 
+If you'd prefer different universal `container` settings, feel free to change them in `variables.scss`.
 
 ```html
 <section class = "banner" id = "banner-your-id">
@@ -71,24 +79,30 @@ Within each section block, you will have immediately have a `div` element with t
 ```
 
 Container elements can be painted with the following types of classes (see [classes](#classes) section):
-+ [Fonts & Text](#fonts-and-text) (Note: These will be applied to the entire contents of the container)
++ [Fonts & Text](#fonts-and-text)
 + [Content Alignment within Containers](#container-alignment)
+
+> Note: Fonts & Text classes should only be applied to `container` elements if you want these classes to affect every child element within the container. 
+>If not, save these for `module` elements.
 
 #### Module
 
-Module elements are created inside container elements.  Modules are your basic content block/element.
-They will automatically flow from left to right. In most use cases, you will paint them with a `width` class, but it's not required. If you don't paint them with a `width` class, then they assume their natural width. THis is useful when creating navigation bars, for example.
+`Module` elements are created inside container elements.  
+`Modules` are your basic content block/element.
+`Modules` will automatically flow from left to right. 
+In most use cases, you will paint them with a `width` class, but it's not required. 
+If you don't paint them with a `width` class, then they assume their natural width. This is useful when creating navigation bars, for example.
 
 ```html
 <section class = "banner" id = "banner-your-id">
 	<div class = "container">
-		<div class = "module per50">
+		<div class = "module w50">
 		</div>
 	</div>
 </section>
 ```
 
-Modules can be assigned any or all of the following [class types](#classes):
+You can assign any or all of the following [class types](#classes) to `module` elemens:
 + [Fonts & Text](#fonts-and-text) (Note: These will be applied to the entire contents of the module)
 + [Individual Module Alignment within Container](#module-alignment)
 + [Module Width](#width) (Including Module Width on Tablet and Mobile)
@@ -96,32 +110,35 @@ Modules can be assigned any or all of the following [class types](#classes):
 + [Padding](#padding)
 + [Margin](#margin)
 
+Like `banner` elements, adding an `id` to your `module` elements is recommended.
 
 ## Classes
 
 Paint's classes govern module width, alignment, margin, padding, along with font size,
-weight, and decoration.  There are also stock classes for images and buttons, and very 
-basic styles for heading, paragraph, and a tags.
+weight, and decoration.  
+Paint comes with basic classes for `img` and `button` elements, and very basic styles for `h`, `p`, and `a` elements.
 
-Typical order of class application is as follows:
-width, panel, padding, margin, alignment, font styles
+In order to keep your code consistent, Paint recommends applying classes in this order:
+
+`width`, `panel`, `alignment`, `padding`, `margin`, `font & text` 
 
 ```html
-<div class = "module per80 panel padding-small margin-right margin-bottom">
+<div class = "module w80 panel ps mr mb">
 	<h3 class = "bold">H3 Heading</h3>
-	<p class = "margin-right italic">Content</p>
+	<p class = "mr italic">Content</p>
 </div>
 ```
 
-
-Available classes include:
+### Available Classes:
 
 #### Building Blocks
-+ .banner
-+ .container
-+ .container-extender
-+ .module
 
+| Class Name |
+| ------------ |
+| `.banner` | 
+| `.container` | 
+| `.container-extender` | 
+| `.module` |
 
 #### General
 
@@ -129,24 +146,44 @@ Available classes include:
 + .panel
 + .panel.highlight
 
+| Class Name |
+| ------------ |
+| `.button` | 
+| `.panel` | 
+| `.panel.highlight` | 
+
+
 
 #### Fonts and Text
-+ .mini (.6em)
-+ .small (.8em)
-+ .medium (1em)
-+ .large (1.25em)
-+ .xl (1.75em)
-+ .x2 (2.5em)
-+ .x3 (3.5em)
-+ .x4 (4em)
-+ .uppercase
-+ .lowercase
-+ .capitalize
-+ .bold
-+ .italic
-+ .text-left (default)
-+ .text-center
-+ .text-right
+
+##### Font Size
+| Class Name | CSS Property:Value | Default |
+| ------------ | ------------ | ------------ |
+| `.mini` | font-size: .6em | no |
+| `.small` | font-size: .8em | no |
+| `.medium` | font-size: 1em | yes |
+| `.large` | font-size: 1.25em | yes |
+| `.xl` | font-size: 1.75em | no |
+| `.x2` | font-size: 2.5em | no |
+| `.x3` | font-size: 3.5em | no |
+| `.x4` | font-size: 4em | no |
+
+##### Capitalization and Text Effect
+| Class Name | CSS Property:Value | Default |
+| ------------ | ------------ | ------------ |
+| `.uppercase` | text-transform: uppercase | no |
+| `.lowercase` | text-transform: lowercase | no |
+| `.capitalize` |  text-transform: capitalize | no |
+| `.bold` | font-weight: bold | no |
+| `.italic` | font-style: italic | no |
+
+##### Text Alignment
+| Class Name | CSS Property:Value | Default |
+| ------------ | ------------ | ------------ |
+| `.text-left` | text-align: left | yes |
+| `.text-right` | text-align: right | no |
+| `.text-center` | text-align: center | no |
+
 
 
 #### Module Width<a name="width"></a>
