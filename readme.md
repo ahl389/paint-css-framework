@@ -16,7 +16,29 @@ Paint is a simple, lightweight, modular CSS framework that allows you rapidly la
 [Check out the example site, built entirely with Paint and regular HTML](https://ahl389.github.io/paint-css-framework/)
 
 ## Setup
-Head to the `src/SCSS` directory and grab the `paint.scss file`, along with the `reset.scss` and `variables.scss` files, and save them in your project's CSS directory. `paint.scss` file is designed to be your primary stylesheet, but doesn't have to be. If want an additional stylesheet, just dont forget to import `paint.scss`. Don't want to use `.scss`? No problem, make a copy of the `.css` file. The only downside to using the `.css` file is the loss of variables to make wholesale modifications/customizations to the base Paint styles.
+
+[SCSS](#scss) / [CSS](#css)
+### SCSS
+
+Head to the `src/SCSS` directory in this repo and grab the following files:
+
+- `paint.scss`
+- `reset.scss`
+- `variables.scss`
+- `custom.scss`
+
+`paint.scss` is the primary file with the majority of Paint's relevant code. 
+
+`reset.scss` contains all the basic CSS resets so can Paint can start with its own clean slate. 
+
+`variables.scss` defines the basic set of variables used throughout Paint. It's common that you might want to modify these values to best suit your needs, or add new variables in this file to support your custom CSS.
+
+`custom.scss` is an additional empty file preloaded into `paint.scss` and is the appropriate location for all custom CSS you want to layer on top of Paint. 
+
+### CSS
+
+
+Save these files to your project's CSS directory. `paint.scss` file is designed to be your primary stylesheet, but doesn't have to be. If want an additional stylesheet, just dont forget to import `paint.scss`. Don't want to use `.scss`? No problem, make a copy of the `.css` file. The only downside to using the `.css` file is the loss of variables to make wholesale modifications/customizations to the base Paint styles.
 
 ## Getting Started with Paint
 Paint is simple enough that getting acquainted and starting to build your website can happen in minutes.
