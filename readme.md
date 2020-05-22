@@ -87,7 +87,7 @@ Container elements can be painted with the following types of classes (see [clas
 
 #### Module
 
-`Module` elements are created inside container elements.  
+`Module` elements are created inside container elements.
 `Modules` are your basic content block/element.
 `Modules` will automatically flow from left to right. 
 In most use cases, you will paint them with a `width` class, but it's not required. 
@@ -114,8 +114,7 @@ Like `banner` elements, adding an `id` to your `module` elements is recommended.
 
 ## Classes
 
-Paint's classes govern module width, alignment, margin, padding, along with font size,
-weight, and decoration.  
+Paint's classes govern module width, alignment, margin, padding, along with font size, weight, and decoration.  
 Paint comes with basic classes for `img` and `button` elements, and very basic styles for `h`, `p`, and `a` elements.
 
 In order to keep your code consistent, Paint recommends applying classes in this order:
@@ -129,9 +128,7 @@ In order to keep your code consistent, Paint recommends applying classes in this
 </div>
 ```
 
-### Available Classes:
-
-#### Building Blocks
+### Building Blocks
 
 | Class Name |
 | ------------ |
@@ -140,11 +137,7 @@ In order to keep your code consistent, Paint recommends applying classes in this
 | `.container-extender` | 
 | `.module` |
 
-#### General
-
-+ .button
-+ .panel
-+ .panel.highlight
+### General
 
 | Class Name |
 | ------------ |
@@ -153,10 +146,9 @@ In order to keep your code consistent, Paint recommends applying classes in this
 | `.panel.highlight` | 
 
 
+### Fonts and Text
 
-#### Fonts and Text
-
-##### Font Size
+#### Font Size
 | Class Name | CSS Property:Value | Default |
 | ------------ | ------------ | ------------ |
 | `.mini` | font-size: .6em | no |
@@ -168,7 +160,7 @@ In order to keep your code consistent, Paint recommends applying classes in this
 | `.x3` | font-size: 3.5em | no |
 | `.x4` | font-size: 4em | no |
 
-##### Capitalization and Text Effect
+#### Capitalization and Text Effect
 | Class Name | CSS Property:Value | Default |
 | ------------ | ------------ | ------------ |
 | `.uppercase` | text-transform: uppercase | no |
@@ -177,7 +169,7 @@ In order to keep your code consistent, Paint recommends applying classes in this
 | `.bold` | font-weight: bold | no |
 | `.italic` | font-style: italic | no |
 
-##### Text Alignment
+#### Text Alignment
 | Class Name | CSS Property:Value | Default |
 | ------------ | ------------ | ------------ |
 | `.text-left` | text-align: left | yes |
@@ -186,63 +178,57 @@ In order to keep your code consistent, Paint recommends applying classes in this
 
 
 
-#### Module Width<a name="width"></a>
-Each of these classes indicate a percentage width (the `w` in front of each number is for `width`) relative to its parent container or module.  Adding a padding class to any module will not alter its outer width.
+### Module Width<a name="width"></a>
+Each of these classes indicate a percentage width (the `w` in front of each number is for `width`) relative to the `module's` parent container.  
+Adding a padding class to any module will *not* alter its outer width - pad away, no math necessary!
+
+Paint applies width from a desktop-first perspective, with excellent default styles for responsive changes on tablet and mobile:
+All width classes will cascade on tablet but default to full-width on mobile, unless otherwise specified.
+If you want a module to have a different width on mobile or tablet, you have to add the corresponding tablet/mobile width class.
+You may apply a desktop, tablet, and mobile width class to any element.
 
 ##### Desktop
 
-+ .w10
-+ .w15
-+ .w20
-+ .w25
-+ .w30
-+ .w33 (33.33%)
-+ .w35
-+ .w40
-+ .w45
-+ .w50
-+ .w55
-+ .w60
-+ .w65
-+ .w70
-+ .w75
-+ .w80
-+ .w85
-+ .w90
-+ .w95
-+ .w100
+| Class Name | CSS Property:Value | Default | Tablet Width | Mobile Width | 
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| `.w10` | width: 10% | no | `.w10-tab` | `.w10-mob` |
+| `.w15` | width: 15% | no | `.w15-tab` | `.w15-mob` |
+| `.w20` | width: 20% | no | `.w20-tab` | `.w20-mob` |
+| `.w25` | width: 25% | no | `.w25-tab` | `.w25-mob` |
+| `.w30` | width: 30% | no | `.w30-tab` | `.w30-mob` |
+| `.w33` | width: 33.333% | no | `.w33-tab` | `.w33-mob` |
+| `.w35` | width: 35% | no | `.w35-tab` | `.w35-mob` |
+| `.w40` | width: 40% | no | `.w40-tab` | `.w40-mob` |
+| `.w45` | width: 45% | no | `.w45-tab` | `.w45-mob` |
+| `.w50` | width: 50% | no | `.w50-tab` | `.w50-mob` |
+| `.w55` | width: 55% | no | `.w55-tab` | `.w55-mob` |
+| `.w60` | width: 60% | no | `.w60-tab` | `.w60-mob` |
+| `.w65` | width: 65% | no | `.w65-tab` | `.w65-mob` |
+| `.w66` | width: 66.667% | no | `.w66-tab` | `.w66-mob` |
+| `.w70` | width: 70% | no | `.w70-tab` | `.w70-mob` |
+| `.w75` | width: 75% | no | `.w75-tab` | `.w75-mob` |
+| `.w80` | width: 80% | no | `.w80-tab` | `.w80-mob` |
+| `.w85` | width: 85% | no | `.w85-tab` | `.w85-mob` |
+| `.w90` | width: 90% | no | `.w90-tab` | `.w90-mob` |
+| `.w95` | width: 95% | no | `.w95-tab` | `.w95-mob` |
+| `.w100` | width: 100% | no | `.w100-tab` | `.w100-mob` |
+
+##### Example
+```html
+<section class = "banner" id = "banner-your-id">
+	<div class = "container">
+		<div class = "module w50 w70-tab">
+			<!-- 
+				this module will be:
+				- 50% of its parent width on deskop
+				- 70% of its parent width on tablet
+				- 100% of its parent width on mobile
+			-->
+	</div>
+</section>
+```
 
 
-##### Tablet
-+ .w10-tab
-+ .w20-tab
-+ .w25-tab
-+ .w30-tab
-+ .w33-tab (33.33%)
-+ .w40-tab
-+ .w50-tab
-+ .w60-tab
-+ .w70-tab
-+ .w75-tab
-+ .w80-tab
-+ .w90-tab
-+ .w100-tab
-
-
-##### Mobile
-+ .w10-mob
-+ .w20-mob
-+ .w25-mob
-+ .w30-mob
-+ .w33-mob (33.33%)
-+ .w40-mob
-+ .w50-mob
-+ .w60-mob
-+ .w70-mob
-+ .w75-mob
-+ .w80-mob
-+ .w90-mob
-+ .w100-mob
 
 #### Order<a name="order"></a>
 
