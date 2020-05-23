@@ -8,9 +8,16 @@
 **/
 
 h1, h2 {
-	font-size: $x3-font;
 	font-weight: bold;
 	color: $accent-color;
+}
+
+h1 {
+	font-size: $x3-font;
+}
+
+h2 {
+	font-size: $x2-font;
 }
 
 h3 {
@@ -49,7 +56,7 @@ img {
 }
 
 a {
-	color: inherit;
+	color: $primary-color;
 	text-decoration: none;
 }
 
@@ -73,10 +80,6 @@ button,
 .panel.highlight {
 	border-radius: 5px;
 	box-shadow: 2px 2px 4px 1px #bbb;
-}
-
-.panel:last-of-type {
-	margin-right: -4px;
 }
 
 
@@ -664,14 +667,6 @@ $i: 5;
 .margin-center {
 	margin: 0 auto;
 }
-
-
-
-/***************************************************************************/
-/*************** YOUR OVERRIDES AND CUSTOMIZATIONS BELOW HERE **************/
-/***************************************************************************/
-
-
 
 
 

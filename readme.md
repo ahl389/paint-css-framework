@@ -182,8 +182,9 @@ In order to keep your code consistent, Paint recommends applying classes in this
 Each of these classes indicate a percentage width (the `w` in front of each number is for `width`) relative to the `module's` parent container.  
 Adding a padding class to any module will *not* alter its outer width - pad away, no math necessary!
 
-Paint applies width from a desktop-first perspective, with excellent default styles for responsive changes on tablet and mobile:
+Paint applies width from a desktop-first perspective, with default behaviors for seamless responsive changes on tablet and mobile:
 All width classes will cascade on tablet but default to full-width on mobile, unless otherwise specified.
+
 If you want a module to have a different width on mobile or tablet, you have to add the corresponding tablet/mobile width class.
 You may apply a desktop, tablet, and mobile width class to any element.
 
@@ -224,6 +225,7 @@ You may apply a desktop, tablet, and mobile width class to any element.
 				- 70% of its parent width on tablet
 				- 100% of its parent width on mobile
 			-->
+		</div>
 	</div>
 </section>
 ```
