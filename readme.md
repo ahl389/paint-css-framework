@@ -132,18 +132,18 @@ In order to keep your code consistent, Paint recommends applying classes in this
 
 | Class Name |
 | ------------ |
-| `.banner` | 
-| `.container` | 
-| `.container-extender` | 
-| `.module` |
+| `banner` | 
+| `container` | 
+| `container-extender` | 
+| `module` |
 
 ### General
 
 | Class Name |
 | ------------ |
-| `.button` | 
-| `.panel` | 
-| `.panel.highlight` | 
+| `button` | 
+| `panel` | 
+| `panel highlight` | 
 
 
 ### Fonts and Text
@@ -151,30 +151,30 @@ In order to keep your code consistent, Paint recommends applying classes in this
 #### Font Size
 | Class Name | CSS Property:Value | Default |
 | ------------ | ------------ | ------------ |
-| `.mini` | font-size: .6em | no |
-| `.small` | font-size: .8em | no |
-| `.medium` | font-size: 1em | yes |
-| `.large` | font-size: 1.25em | yes |
-| `.xl` | font-size: 1.75em | no |
-| `.x2` | font-size: 2.5em | no |
-| `.x3` | font-size: 3.5em | no |
-| `.x4` | font-size: 4em | no |
+| `mini` | font-size: .6em | no |
+| `small` | font-size: .8em | no |
+| `medium` | font-size: 1em | yes |
+| `large` | font-size: 1.25em | yes |
+| `xl` | font-size: 1.75em | no |
+| `x2` | font-size: 2.5em | no |
+| `x3` | font-size: 3.5em | no |
+| `x4` | font-size: 4em | no |
 
 #### Capitalization and Text Effect
 | Class Name | CSS Property:Value | Default |
 | ------------ | ------------ | ------------ |
-| `.uppercase` | text-transform: uppercase | no |
-| `.lowercase` | text-transform: lowercase | no |
-| `.capitalize` |  text-transform: capitalize | no |
-| `.bold` | font-weight: bold | no |
-| `.italic` | font-style: italic | no |
+| `uppercase` | text-transform: uppercase | no |
+| `lowercase` | text-transform: lowercase | no |
+| `capitalize` |  text-transform: capitalize | no |
+| `bold` | font-weight: bold | no |
+| `italic` | font-style: italic | no |
 
 #### Text Alignment
 | Class Name | CSS Property:Value | Default |
 | ------------ | ------------ | ------------ |
-| `.text-left` | text-align: left | yes |
-| `.text-right` | text-align: right | no |
-| `.text-center` | text-align: center | no |
+| `text-left` | text-align: left | yes |
+| `text-right` | text-align: right | no |
+| `text-center` | text-align: center | no |
 
 
 
